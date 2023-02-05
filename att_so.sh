@@ -5,7 +5,7 @@
 sleep 2
 
 echo '###############################################################'
-
+sleep 2
 echo ' >>>>>>>>>>>[  Ola!! Seja bem-vindo ao Avocato ] <<<<<<<<<<<< '
 echo "Seja bem-vindo ao Avocato ! " | boxes -d cat
 
