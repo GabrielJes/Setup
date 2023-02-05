@@ -30,19 +30,21 @@ echo "carregando" && sleep 2
 
 echo '##############################################' && sleep 1
 
-echo '>>>>>>>>>>>>  [ Versao do sistema operacional atual ]  <<<<<<<<<<<<<<'
+echo '>>>>>>>>>>>>  [ Versao do sistema operacional atual ]  <<<<<<<<<<<<<<' && sleep 3
 
 ## versao do sistema operacional atual
 
-cat /etc/os-release
+cat /etc/os-release && sleep 2
 
 ## versao do kernel
 
-echo '>>>>>>>>>>>>>>>>>>  [ versao de kernel ]  <<<<<<<<<<<<<<<<<<'
+echo '>>>>>>>>>>>>>>>>>>  [ versao de kernel ]  <<<<<<<<<<<<<<<<<<' && sleep 3
 uname -r
 
+sleep 1
+
 # atualizacao dos pacotes
-echo '>>>>>>>>>>>>>>>>>>>>>>> [ rodando apt update ] <<<<<<<<<<<<<<<<<<<<<<<<<<<<< '
+echo '>>>>>>>>>>>>>>>>>>>>>>> [ rodando apt update ] <<<<<<<<<<<<<<<<<<<<<<<<<<<<< ' && sleep 2
 
 sudo apt update -y
 sleep 2

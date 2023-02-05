@@ -2,9 +2,7 @@
 
 sleep 2
 
-echo ">>>>>>>>>  [ firefox deletado com sucesso! ]  <<<<<<<<<<<" 
-
-sleep 1
+echo ">>>>>>>>>  [ firefox deletado com sucesso! ]  <<<<<<<<<<<"  && sleep 3
 
 # lista de instalacao dos apps 
 
