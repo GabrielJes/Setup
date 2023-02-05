@@ -1,11 +1,10 @@
 #!bin/bash
 
-
 echo "iniciando atualizacao"
-bash att_so.sh 
+#bash att_so.sh 
 sleep 3
 echo "iniciando configuracao"
-bash config.sh
+#bash config.sh
 
 
 echo "iniciando instalacao dos aplicativos"

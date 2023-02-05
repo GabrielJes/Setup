@@ -2,70 +2,58 @@
 
 # apresentacao do shell script #
 
-echo '#################################'
+sleep 2
+
+echo '###############################################################'
+
+echo ' >>>>>>>>>>>[  Ola!! Seja bem-vindo ao Avocato ] <<<<<<<<<<<< '
+echo "Seja bem-vindo ao Avocato ! " | boxes -d cat
 
 sleep 2
 
-
-echo 'Ola!! Seja bem-vindo ao Teoku =)'
-
-sleep 2
-
-echo 'No Teoku, Os pacotes de atualização são baseados no que eu quiser, caso queira outros aplicativos faca um clone do projeto e mude para os aplicativos de sua preferência. '
+echo 'No Avocato, Os pacotes de atualização são baseados no que eu quiser,
+caso queira outros aplicativos faca um clone do projeto e mude para os aplicativos de sua preferência. '
 
 sleep 2
 
 echo 'Você gostaria de iniciar com os pacotes atuais?'
 
-echo '[S/N]'
-
 # Perguntando se ele realmente quer usar o app#
+# loop s/n 
 
-x="s"
+read -p "Deseja continuar? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 
-while [ 1 ];
-
-do
-
-read resposta
-
-sleep 3
-
-if [ $resposta != $x ]; then   ##### arrumar o bugg #####
-
-exit
-# print das informacoes sobre o sistema do usuario e versao do kernel # 
-else
-    echo 'OK! vamos la'
-
-    echo '###################################'
-
-    echo 'A versao do seu sistema e :' 
-
-    cat /etc/os-release
-
-    echo 'com a versao de kernel'
-
-    uname -r
-
-    echo '>>>>>>>>>>>>>>>>>>>>>>>  rodando apt update  <<<<<<<<<<<<<<<<<<<<<<<<<<<<< '
-
-    sudo apt update -y
-
-    sleep 2
+echo "ok!! BORAA LAAAA ! " | boxes -d peek
 
 
-    exit
+echo "carregando" && sleep 2
+
+echo '##############################################' && sleep 1
+
+echo '>>>>>>>>>>>>  [ Versao do sistema operacional atual ]  <<<<<<<<<<<<<<'
+
+## versao do sistema operacional atual
+
+cat /etc/os-release
+
+## versao do kernel
+
+echo '>>>>>>>>>>>>>>>>>>  [ versao de kernel ]  <<<<<<<<<<<<<<<<<<'
+uname -r
+
+# atualizacao dos pacotes
+echo '>>>>>>>>>>>>>>>>>>>>>>> [ rodando apt update ] <<<<<<<<<<<<<<<<<<<<<<<<<<<<< '
+
+sudo apt update -y
+sleep 2
     
-fi
-
-done
-
 # Deletando firefox
 
 echo '>>>>>>>>>>>>>>>>>>>>>>>   Deletando firefox   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<' 
-
 sudo apt-get --purge remove firefox -y
 
+#rodando config 2
+
+bash config.sh 
 
 

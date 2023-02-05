@@ -1,60 +1,56 @@
 #!/bin/bash                  
 
-# Deletando o firefox 
-echo ">>>>>>>>>>>>>>>  Deletando o firefox   <<<<<<<<<<<<<<<"
-
 sleep 2
 
-sudo apt-get --purge remove firefox -y
-
-echo ">>>>>>> firefox deletado com sucesso! <<<<<<<<" 
+echo ">>>>>>>>>  [ firefox deletado com sucesso! ]  <<<<<<<<<<<" 
 
 sleep 1
 
 # lista de instalacao dos apps 
 
-echo "os apps que serao instalados na maquina sao:
-
+echo ">>>>>>>>>  [ Configuracoes que vao ser instalados ]  <<<<<<<<<<<
 //
 
-homebrew
 git
 vim
 locate
 wget
 snap
+
 "
 
-"//"
+sleep 3
 
 echo ">>>>>>> instalando configs <<<<<<<<<<<<"
 
-echo ">>>>>>>   instalando git   <<<<<<<"
+echo ">>>>>>>>>  [ (git) sendo instalado ]  <<<<<<<<<<<" && sleep 2
 
 sudo apt install git -y 
 
 sleep 1
 
-echo ">>>>>>>   instalando vim  <<<<<<<"
+echo ">>>>>>>>>  [ (vim) sendo instalado ]  <<<<<<<<<<<" && sleep 2
 
 sudo apt install vim -y 
 
 sleep 1
 
-echo ">>>>>>>   instalando locate   <<<<<<<"
+echo ">>>>>>>>>  [ (plocate) sendo instalado ]  <<<<<<<<<<<" && sleep 2
 
 sudo apt install plocate -y
 
 
-echo ">>>>>>>   instalando wget   <<<<<<<"
+echo ">>>>>>>>>  [ (wget) sendo instalado ]  <<<<<<<<<<<" && sleep 2
 
 sudo apt install wget 
 
-echo ">>>>>> instalando snapd <<<<<<<<"
+echo ">>>>>>>>>  [ (snap) sendo instalado ]  <<<<<<<<<<<" && sleep 2
 
 sudo apt install snapd
 
+sleep 3
 
-exit
+bash apps_installer.sh
+
 
 
