@@ -7,6 +7,7 @@ sleep 3
 echo "iniciando configuracao"
 echo "iniciando instalacao dos aplicativos"
 echo " aplicativos que vao ser instalados :
+
 Spotify
 Google-chrome
 vscode
@@ -18,7 +19,7 @@ sleep 2
 
 echo ">>>>>>>>>>      [  iniciando instalacao do ( discord )  ]       <<<<<<<<<<<"
 
-sudo apt install discord -y 
+sudo apt install discord -y || sudo snap install discord
 
 echo "instalacao do discord concluida"
 
