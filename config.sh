@@ -19,7 +19,7 @@ snap
 
 sleep 3
 
-echo ">>>>>>> instalando configs################<"
+echo "################ [ instalando configs ] ################"
 
 echo "################ [ (git) sendo instalado ] ################" && sleep 2
 
