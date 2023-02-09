@@ -2,11 +2,11 @@
 
 sleep 2
 
-echo ">>>>>>>>>  [ firefox deletado com sucesso! ]  <<<<<<<<<<<"  && sleep 3
+echo "################ [ firefox deletado com sucesso! ] ################"  && sleep 3
 
 # lista de instalacao dos apps 
 
-echo ">>>>>>>>>  [ Configuracoes que vao ser instalados ]  <<<<<<<<<<<
+echo "################ [ Configuracoes que vao ser instaladas ] ################
 //
 
 git
@@ -19,30 +19,30 @@ snap
 
 sleep 3
 
-echo ">>>>>>> instalando configs <<<<<<<<<<<<"
+echo ">>>>>>> instalando configs################<"
 
-echo ">>>>>>>>>  [ (git) sendo instalado ]  <<<<<<<<<<<" && sleep 2
+echo "################ [ (git) sendo instalado ] ################" && sleep 2
 
 sudo apt install git -y 
 
 sleep 1
 
-echo ">>>>>>>>>  [ (vim) sendo instalado ]  <<<<<<<<<<<" && sleep 2
+echo "################ [ (vim) sendo instalado ] ################" && sleep 2
 
 sudo apt install vim -y 
 
 sleep 1
 
-echo ">>>>>>>>>  [ (plocate) sendo instalado ]  <<<<<<<<<<<" && sleep 2
+echo "################ [ (plocate) sendo instalado ] ################" && sleep 2
 
 sudo apt install plocate -y
 
 
-echo ">>>>>>>>>  [ (wget) sendo instalado ]  <<<<<<<<<<<" && sleep 2
+echo "################ [ (wget) sendo instalado ] ################" && sleep 2
 
 sudo apt install wget 
 
-echo ">>>>>>>>>  [ (snap) sendo instalado ]  <<<<<<<<<<<" && sleep 2
+echo "################ [ (snap) sendo instalado ] ################" && sleep 2
 
 sudo apt install snapd
 

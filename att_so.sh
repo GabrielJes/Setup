@@ -28,9 +28,6 @@ barra_de_loading() {
 
 # apresentacao do shell script #
 
-echo '###############################################################'
-sleep 1
-
 echo "instalando dependencias" && sleep 2
 
 barra_de_loading sudo apt install boxes
@@ -38,7 +35,7 @@ barra_de_loading sudo apt install boxes
 sleep 2
 
 echo '################ [  Ola!! Seja bem-vindo ao AVOCAT ] ################'
-echo "Seja bem-vindo ao Avocato ! " | boxes -d cat
+echo "Seja bem-vindo ao Avocat ! " | boxes -d cat
 
 sleep 2
 
@@ -80,17 +77,36 @@ sleep 1
 
 echo '################ [ Removendo firefox ] ################'
 
-barra_de_loading sudo apt-get --purge remove Firefox -y
-
 # identificar arquivo do firefox e deletar o navegador
 
+# cd ~/.mozilla 
+
+sudo apt-get purge firefox -y
+
+# verificar se foi removido
+
+# se sim  print removido
+
+# nao passa para o snap
+
+barra_de_loading sudo snap remove --purge firefox 
+
+# se funcionar printa que foi removido
+
+# nao printa firefox nao encontrado 
+
+# Validar se o firefox realmente foi deletado
+
+# se o temrinal retornar "snap "firefox" is not installed"
+
+# print firefox nao instalado
+
+# se o retornar 
 
 
-# se nao existir esse arquivo naquele local printa que o firefox foi deletado
 
-# se nao printa que falhou e tenta a segunda opcao
 
-# se nao der novamente printa que sera ignorado
+
 
 
 #rodando config 2
