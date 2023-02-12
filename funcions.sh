@@ -1,43 +1,3 @@
-#!/bin/bash
-
-
-
-loading_two(){
-    clear
-    spinner=( '|' '/' '-' '\');
- 
-cat << EOF
-
-EOF
- 
- 
-count(){
-  spin &
-  pid=$!
- 
-  for i in `seq 1 10`
-  do
-    sleep 1;
-  done
- 
-  kill $pid  
-}
- 
-spin(){
-  while [ 1 ]
-  do 
-    for i in ${spinner[@]}; 
-    do 
-      echo -ne "\r$i";
-      sleep 0.2;
-    done;
-  done
-
-}
-        
-}
-
-
 
 ## loading 100
 
@@ -64,9 +24,39 @@ barra_de_loading() {
     echo "."
 
     done
+} 
+verify_package() {
+
+    nome=app
+    pacote=$(dpkg --get-selections | grep "$nome" ) 
+    echo 
+    echo -n "Instalação bem sucedida! ."
+    sleep 2
+  if [ -n "$pacote" ] ;
+  then echo
+     echo "Pacote ja instalado"
+  else echo
+     echo "Pacote $nome Necessario-> Nao instalado"
+     echo "Instalando Automaticamente Pacote Dialog..."
+     sudo apt-get install $nome
+  fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
-
-
-loading_two sudo apt update
-
-barra_de_loading sudo apt upgrade
