@@ -1,5 +1,6 @@
 #!/bin/bash 
 
+sudo apt install neofetch -y
 source ./funcions.sh && sudo apt install figlet -y 
 figlet "Bem-vindo"
 figlet "ao BMS!"
@@ -12,6 +13,7 @@ sleep 1
 # importando funcao da loading
 echo "Instalando dependencias" && 
 sleep 1 
+echo
 
 # Inicio da instalacao
 net="net-tools"
@@ -52,24 +54,19 @@ app="wget"
 echo "Instalando wget"
 barra_de_loading sudo apt install wget -y && sleep 1 && verify_package $app
 
-
-# screensfetch installer 
-fetch="screensfetch"
-app="screensfetch"
-echo "Instalando screensfetch"
-barra_de_loading sudo apt install screensfetch -y && sleep 1 && verify_package $app
-
-
 # Atualizando pacostes 
+sleep 1
 echo '################ [ Atualizando os pacotes do sistema ] ################' && sleep 1
 barra_de_loading sudo apt upgrade -y
+sleep 1
 
 # versao do sistema operacional atual
 echo '################ [ Setup atual ] ################' && sleep 1
-screenfetch
+neofetch
+echo 
 
 echo "Verificando se todos os pacotes foram instalados com sucesso" && sleep 1
-
+echo
 
 verify_package $net
 verify_package $locate
@@ -77,7 +74,6 @@ verify_package $vimm
 verify_package $gitt
 verify_package $snapp
 verify_package $wgett
-verify_package $fetch
 
 
 echo "Iniciando processo de instalação dos aplicativos. "

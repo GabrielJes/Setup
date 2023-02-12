@@ -26,38 +26,51 @@ barra_de_loading() {
     done
 } 
 verify_package() {
-    nome=app
+    nome=$app
     pacote=$(dpkg --get-selections | grep "$nome" )  
-    echo -n "Instalação bem sucedida! ."
-    sleep 2
+    sleep 1
   if [ -n "$pacote" ] ;
-  then echo
+    then echo
      echo "Pacote instalado com sucesso! "
      echo
      sleep 1
-
   else echo 
+     echo
      echo "Pacote falhou!"
+     echo
      echo "Instalando com outro gerenciador de Pacotes ."
-     sudo apt-get install $nome
+     sleep 1
+     apf=$app
+     barra_de_loading sudo apt install $nome
+     sleep 1
+     verify_funcion $apf
+
   fi
 
+}
 
+verify_funcion(){
 
+nome=$apf
+    pacote=$(dpkg --get-selections | grep "$nome" )  
+    sleep 1
+  if [ -n "$pacote" ] ;
+    then echo
+     echo "Pacote instalado com sucesso! "
+     echo
+     sleep 1
+  else echo
+     echo 
+     echo "Pacote falhou!"
+     sn 
 
+  fi
 
+}
 
+sn(){
 
-
-
-
-
-
-
-
-
-
-
-
+read -p "Deja ignorar o pacote atual? (Y/N): " confirm && 
+[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 
 }
