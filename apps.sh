@@ -7,23 +7,7 @@ echo "################ [  iniciando instalacao do ( discord )  ] ###############
 sudo apt install discord -y 
 
 # loop s/n 
-read -p "O discord foi instalado?  (Y/N): " confirm && 
-[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || 
-[ $confirm == [nN]] 
-    echo "instalacao do discord falhou!"
-    echo "configurando dpkg! "
-    sudo dpkg --configure -a
-
-[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || 
-[ $confirm == [nN]] 
-    echo "configuracao do dpkg falhou!"
-    Instalando "via snap"
-    sudo snap install discord 
-
-    [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || 
-    [ $confirm == [nN]] 
-    echo "instalacao do discord falhou!"
-    echo "instalacao do discord nao pode ser concluida!"
+verify_package 
 
 echo "instalacao do discord concluida"
 
