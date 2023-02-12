@@ -36,7 +36,7 @@ verify_package() {
      sleep 1
   else echo 
      echo
-     echo "Pacote falhou!"
+     echo "Pacote $nome falhou!"
      echo
      echo "Instalando com outro gerenciador de Pacotes ."
      sleep 1
