@@ -11,9 +11,9 @@ $ apt install boxes
 $ git clone https://github.com/GabrielJes/Setup.git
 
 # configuracoes dos comandos linux 
-alias avocato='cd ~/Setup/ && bash att_so.sh' >> .bashrc && source .bashrc
+alias busy='cd ~/Setup/ && bash dependencies.sh' >> .bashrc && source .bashrc
 
-$ avocato
+$ busy
 
 
 

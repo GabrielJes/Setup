@@ -1,35 +1,27 @@
 #!bin/bash
 
-echo "iniciando atualizacao"
-
-sleep 3
-
-echo "iniciando configuracao"
-echo "iniciando instalacao dos aplicativos"
-echo " aplicativos que vao ser instalados :
-
-Spotify
-Google-chrome
-vscode
-Steam
-Discord
-netflix "
-
-sleep 2
-
-echo "################ [  iniciando instalacao do ( discord )  ] ################"
-
-sudo apt install discord -y || sudo snap install discord
-
-echo "instalacao do discord concluida"
-
 sleep 1
 
+# Instalando discord 
+echo "################ [  iniciando instalacao do ( discord )  ] ################"
+discord="discord"
+app="discord"
+echo "Instalando discord" 
+
+#verificando se discord esta instalado
+barra_de_loading sudo apt install plocate -y && sleep 1 && verify_package $app
+sleep 1
+
+# Instalando Steam
 echo "################ [  iniciando instalacao da ( Steam )  ] ################"
+steam="Steam"
+app="Steam"
+echo "Instalando Steam" 
 
-sudo apt install steam -y
+#verificando sa Steam esta instalada
+barra_de_loading sudo apt install plocate -y && sleep 1 && verify_package $app
+sleep 1
 
-echo "instalacao do steam concluida"
 
 echo  "################ [  iniciando instalacao da ( Google-Chrome )  ] ################"
 
@@ -43,13 +35,15 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 echo  "################ [  iniciando instalacao  ] ################"
 
-sudo dpkg -i google-chrome-stable_current_amd64.deb
+barra_de_loading  sudo dpkg -i google-chrome-stable_current_amd64.deb && sudo apt-get install -f 
 
-sudo apt-get install -f
+google_chrome="google-chrome"
+app="google-chrome"
+echo "google-chrome" 
 
-echo "instalacao do google-chrome concluida"
-
-sleep 2
+#verificando se discord esta instalado
+barra_de_loading sudo apt install plocate -y && sleep 1 && verify_package $app
+sleep 1
 
 echo  "################ [  iniciando instalacao da ( vscode )  ] ################"
 
