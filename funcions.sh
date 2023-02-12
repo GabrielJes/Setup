@@ -26,7 +26,6 @@ barra_de_loading() {
     done
 } 
 verify_package() {
-
     nome=app
     pacote=$(dpkg --get-selections | grep "$nome" ) 
     echo 
