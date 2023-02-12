@@ -27,15 +27,16 @@ barra_de_loading() {
 } 
 verify_package() {
     nome=app
-    pacote=$(dpkg --get-selections | grep "$nome" ) 
-    echo 
+    pacote=$(dpkg --get-selections | grep "$nome" )  
     echo -n "Instalação bem sucedida! ."
     sleep 2
   if [ -n "$pacote" ] ;
-
   then echo
-     echo "Pacote instalado"
-  else echo
+     echo "Pacote instalado com sucesso! "
+     echo
+     sleep 1
+
+  else echo 
      echo "Pacote falhou!"
      echo "Instalando com outro gerenciador de Pacotes ."
      sudo apt-get install $nome
