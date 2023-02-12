@@ -32,11 +32,12 @@ verify_package() {
     echo -n "Instalação bem sucedida! ."
     sleep 2
   if [ -n "$pacote" ] ;
+
   then echo
-     echo "Pacote ja instalado"
+     echo "Pacote instalado"
   else echo
-     echo "Pacote $nome Necessario-> Nao instalado"
-     echo "Instalando Automaticamente Pacote Dialog..."
+     echo "Pacote falhou!"
+     echo "Instalando com outro gerenciador de Pacotes ."
      sudo apt-get install $nome
   fi
 
