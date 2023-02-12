@@ -1,25 +1,29 @@
 #!bin/bash
 
-echo "iniciando atualizacao"
-
-sleep 3
-
-echo "iniciando configuracao"
-echo "iniciando instalacao dos aplicativos"
-echo " aplicativos que vao ser instalados :
-
-Spotify
-Google-chrome
-vscode
-Steam
-Discord
-netflix "
-
 sleep 2
 
 echo "################ [  iniciando instalacao do ( discord )  ] ################"
 
-sudo apt install discord -y || sudo snap install discord
+sudo apt install discord -y 
+
+# loop s/n 
+read -p "O discord foi instalado?  (Y/N): " confirm && 
+[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || 
+[ $confirm == [nN]] 
+    echo "instalacao do discord falhou!"
+    echo "configurando dpkg! "
+    sudo dpkg --configure -a
+
+[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || 
+[ $confirm == [nN]] 
+    echo "configuracao do dpkg falhou!"
+    Instalando "via snap"
+    sudo snap install discord 
+
+    [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || 
+    [ $confirm == [nN]] 
+    echo "instalacao do discord falhou!"
+    echo "instalacao do discord nao pode ser concluida!"
 
 echo "instalacao do discord concluida"
 
