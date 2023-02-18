@@ -111,7 +111,8 @@ verify_apps() {
      echo "Instalando $nome ."
      sleep 1
      apf=$app
-     barra_de_loading sudo apt install $nome 
+     barra_de_loading 
+     sudo apt install $nome 
      sleep 1
      verify_funcion $apf
 
