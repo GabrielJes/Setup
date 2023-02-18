@@ -299,7 +299,6 @@ verify_plocate() {
 
   fi
 }
-
 verify_discord() {
     nome=$app
     pacote=$(dpkg --get-selections | grep "$nome" )  
