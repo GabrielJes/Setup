@@ -87,6 +87,7 @@ escolha() {
 read -p "O pacote $nome falhou! gostaria de ignorar esse pacote e partir para o proximo ? (Y/N) : " confirm && 
 [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 sleep 1
+echo
 
 }
 
@@ -117,17 +118,18 @@ verify_apps() {
 
 # Funcao dedicada para instalacao do google 
 verify_google_chorme() {
-    nome=$app
+    nome="google-chorme" || "google" || "chorme"
+    nome_pacote=$app
     pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo $nome "ja instalado! "
+     echo $nome_pacote "ja instalado! "
      sleep 1
      echo
   else echo 
      echo
-     echo "$nome nao foi identificado!"
+     echo "$nome_pacote nao foi identificado!"
      echo
      echo "Instalando $nome ."
      sleep 1
