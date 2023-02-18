@@ -38,7 +38,7 @@ app="wget"
 echo "Instalando wget"
 barra_de_loading sudo apt install wget -y && sleep 1 && verify_package $app
 
-# Atualizando pacostes 
+# Atualizando pacotes
 sleep 1
 echo '################ [ Atualizando os pacotes do sistema ] ################' && sleep 1
 barra_de_loading sudo apt upgrade -y

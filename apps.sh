@@ -3,7 +3,7 @@
 source ./funcions.sh
 sleep 1
 
-#verificando se discord esta instalado
+# verificando se discord esta instalado
 echo 'Verificando discord'
 app='discord'
 sleep 1
@@ -11,19 +11,19 @@ barra_de_loading
 verify_apps
 
 
-# Instalando Steam
+# verificando se esta Instalando Steam
 echo 'Verificando Steam'
-app='Steam'
+app='steam'
 sleep 1
 barra_de_loading 
 verify_apps
 
-#verificando sa Steam esta instalada
-barra_de_loading sudo apt install plocate -y && sleep 1 && verify_package $app
+# Verificando se google-chorme esta instalado
+echo 'Verificando google-chrome'
+app='google-chrome'
 sleep 1
-
-
-echo  "################ [  iniciando instalacao da ( Google-Chrome )  ] ################"
+barra_de_loading 
+verify_google_chorme
 
 sleep 1
 
@@ -37,6 +37,8 @@ echo  "################ [  iniciando instalacao  ] ################"
 
 barra_de_loading  sudo dpkg -i google-chrome-stable_current_amd64.deb && sudo apt-get install -f 
 
+google_chrome
+
 google_chrome="google-chrome"
 app="google-chrome"
 echo "google-chrome" 
@@ -44,6 +46,8 @@ echo "google-chrome"
 #verificando se discord esta instalado
 barra_de_loading sudo apt install plocate -y && sleep 1 && verify_package $app
 sleep 1
+
+
 
 echo  "################ [  iniciando instalacao da ( vscode )  ] ################"
 

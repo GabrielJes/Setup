@@ -109,3 +109,41 @@ verify_apps() {
   fi
 
 }
+
+verify_google_chorme() {
+    nome=$app
+    pacote=$(dpkg --get-selections | grep "$nome" )  
+    sleep 1
+  if [ -n "$pacote" ] ;
+    then echo
+     echo $nome "ja instalado! "
+     echo
+     sleep 1
+  else echo 
+     echo
+     echo "$nome nao foi identificado!"
+     echo
+     echo "Instalando $nome ."
+     sleep 1
+     apf=$app
+     sleep 1
+
+    echo "Download em andamento"
+
+    sleep 2
+
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+    echo  "################ [  iniciando instalacao  ] ################"
+
+    barra_de_loading  sudo dpkg -i google-chrome-stable_current_amd64.deb && sudo apt-get install -f 
+
+    google_chrome
+
+    sleep 1
+
+     verify_funcion $apf
+
+  fi
+
+}
