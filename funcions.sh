@@ -62,8 +62,8 @@ nome=$apf
      sleep 1
   else echo
      echo 
-     echo "Pacote falhou!"
-      
+     echo "Pacote $nome falhou!"
+     sim_ou_nao 
 
   fi
 
