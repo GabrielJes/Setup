@@ -1,22 +1,22 @@
 #!bin/bash
 
+source ./funcions.sh
 sleep 1
-
-# Instalando discord 
-echo "################ [  iniciando instalacao do ( discord )  ] ################"
-discord="discord"
-app="discord"
-echo "Instalando discord" 
 
 #verificando se discord esta instalado
-barra_de_loading sudo apt install plocate -y && sleep 1 && verify_package $app
+echo 'Verificando discord'
+app='discord'
 sleep 1
+barra_de_loading 
+verify_apps
+
 
 # Instalando Steam
-echo "################ [  iniciando instalacao da ( Steam )  ] ################"
-steam="Steam"
-app="Steam"
-echo "Instalando Steam" 
+echo 'Verificando Steam'
+app='Steam'
+sleep 1
+barra_de_loading 
+verify_apps
 
 #verificando sa Steam esta instalada
 barra_de_loading sudo apt install plocate -y && sleep 1 && verify_package $app
