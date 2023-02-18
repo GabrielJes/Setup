@@ -9,7 +9,7 @@ echo 'Verificando discord'
 app='discord'
 sleep 1
 barra_de_loading
-verify_apps
+verify_discord
 
 # Installer e verify Steam
 echo 'Verificando Steam'
