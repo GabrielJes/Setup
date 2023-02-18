@@ -317,9 +317,27 @@ verify_discord() {
      sleep 1
      apf=$app
      barra_de_loading 
-     sudo snap install $nome  --classic
+     sudo snap install $nome 
      sleep 1
-     verify_funcion $apf
+     verify_funcion_snap $apf
+
+  fi
+}
+
+verify_funcion_snap(){
+
+nome=$apf
+    pacote=$(snap find $nome | grep $nome )  
+    sleep 1
+  if [ -n "$pacote" ] ;
+    then echo
+     echo $nome" instalado com sucesso! "
+     echo
+     sleep 1
+  else echo
+     echo 
+     echo "Pacote $nome falhou!"
+     escolha  
 
   fi
 }
