@@ -71,26 +71,6 @@ nome=$apf
   fi
 
 }
-
-# S/n para continuar ou fechar o comando
-sim_ou_nao() {
-
-read -p "Você gostaria de iniciar com os pacotes atuais? (Y/N): " confirm && 
-[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
-sleep 1
-
-}
-
-# Mesma funcao de escolha mas dessa vez dedicada apenas a verificacao de pacotes
-escolha() {
-
-read -p "O pacote $nome falhou! gostaria de ignorar esse pacote e partir para o proximo ? (Y/N) : " confirm && 
-[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
-sleep 1
-echo
-
-}
-
 # Funcao dedicada a verificacao de aplicativos instalados 
 verify_apps() {
     nome=$app
@@ -118,7 +98,7 @@ verify_apps() {
 
 # Funcao dedicada para instalacao do google 
 verify_google_chorme() {
-    nome="google-chorme" || "google" || "chorme"
+    nome="google-chrome" || "google" || "chrome"
     nome_pacote=$app
     pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
@@ -136,7 +116,6 @@ verify_google_chorme() {
      echo "Download em andamento"
      sleep 2
      wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-     echo  "################ [  iniciando instalacao  ] ################"
      barra_de_loading  sudo dpkg -i google-chrome-stable_current_amd64.deb && sudo apt-get install -f 
      google_chrome
      sleep 1
@@ -144,5 +123,24 @@ verify_google_chorme() {
     
 
   fi
+
+}
+
+# S/n para continuar ou fechar o comando
+sim_ou_nao() {
+
+read -p "Você gostaria de iniciar com os pacotes atuais? (Y/N): " confirm && 
+[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+sleep 1
+
+}
+
+# Mesma funcao de escolha mas dessa vez dedicada apenas a verificacao de pacotes
+escolha() {
+
+read -p "O pacote $nome falhou! gostaria de ignorar esse pacote e partir para o proximo ? (Y/N) : " confirm && 
+[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+sleep 1
+echo
 
 }

@@ -1,51 +1,38 @@
 #!bin/bash
 
+# Inicio
 source ./funcions.sh
 sleep 1
 
-# verificando se discord esta instalado
+# Installer e verify discord
 echo 'Verificando discord'
 app='discord'
 sleep 1
-barra_de_loading 
+barra_de_loading
 verify_apps
 
-
-# verificando se esta Instalando Steam
+# Installer e verify Steam
 echo 'Verificando Steam'
 app='steam'
 sleep 1
-barra_de_loading 
+barra_de_loading
 verify_apps
 
-# Verificando se google-chorme esta instalado
+# || Installer e verify Google-chrome 
 echo 'Verificando google-chrome'
-app='chrome'
+app='google-chrome'
 sleep 1
 barra_de_loading 
 verify_google_chorme
 sleep 1
 
-echo "Download em andamento"
-sleep 2
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
-echo  "################ [  iniciando instalacao  ] ################"
-barra_de_loading  sudo dpkg -i google-chrome-stable_current_amd64.deb && sudo apt-get install -f 
-
-google_chrome
-
-google_chrome="google-chrome"
-app="google-chrome"
-echo "google-chrome" 
-
-#verificando se discord esta instalado
-barra_de_loading sudo apt install plocate -y && sleep 1 && verify_package $app
+# Installer e verify vscode
+echo 'Verificando vscode'
+app='code'
 sleep 1
-
-
-
-echo  "################ [  iniciando instalacao da ( vscode )  ] ################"
+barra_de_loading 
+verify_apps
+sleep 1
 
 sudo snap install --classic vscode
 
