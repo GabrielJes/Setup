@@ -42,7 +42,7 @@ verify_package() {
      echo "Instalando com outro gerenciador de Pacotes ."
      sleep 1
      apf=$app
-     barra_de_loading sudo apt install $nome
+     barra_de_loading sudo snap install $nome --classic
      sleep 1
      verify_funcion $apf
 
@@ -63,7 +63,7 @@ nome=$apf
   else echo
      echo 
      echo "Pacote $nome falhou!"
-     sim_ou_nao 
+     escolha  
 
   fi
 
@@ -76,6 +76,15 @@ read -p "Você gostaria de iniciar com os pacotes atuais? (Y/N): " confirm &&
 sleep 1
 
 }
+
+escolha() {
+
+read -p "O pacote $nome falhou! gostaria de ignorar esse pacote e partir para o proximo? : " confirm && 
+[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+sleep 1
+
+}
+
 
 verify_apps() {
     nome=$app
