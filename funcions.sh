@@ -299,6 +299,7 @@ verify_plocate() {
 
   fi
 }
+# Funcao dedicada a verificacao de aplicativos instalados 
 verify_discord() {
     nome=$app
     pacote=$(dpkg --get-selections | grep "$nome" )  
@@ -319,4 +320,6 @@ verify_discord() {
      sudo snap install $nome  --classic
      sleep 1
      verify_funcion $apf
+
+  fi
 }
