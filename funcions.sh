@@ -27,6 +27,30 @@ barra_de_loading() {
     done
 } 
 
+# S/n para continuar ou fechar o comando
+sim_ou_nao() {
+
+read -p "Você gostaria de iniciar com os pacotes atuais? (Y/N): " confirm && 
+[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+sleep 1
+}
+
+# Mesma funcao de escolha mas dessa vez dedicada apenas a verificacao de pacotes
+escolha() {
+
+read -p "O pacote $nome falhou! gostaria de ignorar esse pacote e partir para o proximo ? (Y/N) : " confirm && 
+[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+sleep 1
+echo
+}
+
+sim_ou_nao_lista() {
+
+read -p "Você gostaria de iniciar com os pacotes e aplicativos atuais? (Y/N): " confirm && 
+[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+sleep 1
+}
+
 # Funcao para verificar os pacotes, se ja foram instalados ou se ainda nao estao na maquina
 verify_package() {
     nome=$app
@@ -49,7 +73,6 @@ verify_package() {
      verify_funcion $apf
 
   fi
-
 }
 
 # fucao para verificar a verificacao esta funcioinando bem, e uma especie de 2 check
@@ -69,8 +92,8 @@ nome=$apf
      escolha  
 
   fi
-
 }
+
 # Funcao dedicada a verificacao de aplicativos instalados 
 verify_apps() {
     nome=$app
@@ -93,7 +116,6 @@ verify_apps() {
      verify_funcion $apf
 
   fi
-
 }
 
 # Funcao dedicada para instalacao do google 
@@ -121,26 +143,65 @@ verify_google_chorme() {
      sleep 1
      verify_funcion $apf
     
+  fi
+}
+
+verify_spotify() {
+    nome="spotify" || "Spotify" || "spotify"
+    nome_pacote=$app
+    pacote=$(snap find $nome | grep $nome )
+  if [ -n "$pacote" ] ;
+    then echo
+     echo "$nome_pacote ja instalado! "
+     echo
+     sleep 1
+  else echo 
+     echo
+     echo "Pacote $nome_pacote nao encontrado! "
+     echo
+     echo "Instalando $nome ."
+     sleep 1
+     apf=$app
+     barra_de_loading sudo snap install $nome --classic
+     sleep 1
+     verify_funcion $apf
 
   fi
-
 }
 
-# S/n para continuar ou fechar o comando
-sim_ou_nao() {
+menu_pycharm () {
 
-read -p "Você gostaria de iniciar com os pacotes atuais? (Y/N): " confirm && 
-[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
-sleep 1
-
-}
-
-# Mesma funcao de escolha mas dessa vez dedicada apenas a verificacao de pacotes
-escolha() {
-
-read -p "O pacote $nome falhou! gostaria de ignorar esse pacote e partir para o proximo ? (Y/N) : " confirm && 
-[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
-sleep 1
+echo "Escolha a versão do Pycharm de sua preferência : "
 echo
+echo "  1 - Pycharm - educational "
+echo "  2 - Pycharm - professional "
+echo "  3 - Pycharm - community "
+echo
+
+read -n 1 -s n
+case $n in
+  1)  echo "Pycharm - educational "
+  echo
+  echo "Instalando Pycharm - educational " 
+  sleep 1
+  barra_de_loading sudo snap install pycharm-educational --classic
+  verify_apps ;;
+
+  2) echo "Pycharm - professional " 
+  echo
+  echo "Instalando Pycharm - professional " 
+  sleep 1
+  barra_de_loading sudo snap install pycharm-professional --classic
+  verify_apps ;;
+
+  3) echo "Pycharm - community " 
+  echo
+  echo "Instalando Pycharm - community " 
+  sleep 1
+  barra_de_loading sudo snap install pycharm-community --classic
+  verify_apps ;; 
+  
+  *) echo "invalid option";;
+esac
 
 }

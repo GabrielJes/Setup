@@ -5,7 +5,8 @@ echo "Instalando dependencias"
 sleep 1 
 echo
 
-# Start installer 
+# Start installer ||
+# Net-tools installer
 app="net-tools"
 echo "Instalando net-tools"
 barra_de_loading sudo apt install $app -y
@@ -43,6 +44,7 @@ app="wget"
 echo "Instalando wget"
 barra_de_loading sudo apt install wget -y
 sleep 1 && verify_package $app
+# finished installing || 
 
 # Atualizando pacotes
 sleep 1
