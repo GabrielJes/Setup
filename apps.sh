@@ -20,21 +20,17 @@ verify_apps
 
 # Verificando se google-chorme esta instalado
 echo 'Verificando google-chrome'
-app='google-chrome'
+app='chrome'
 sleep 1
 barra_de_loading 
 verify_google_chorme
-
 sleep 1
 
 echo "Download em andamento"
-
 sleep 2
-
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 echo  "################ [  iniciando instalacao  ] ################"
-
 barra_de_loading  sudo dpkg -i google-chrome-stable_current_amd64.deb && sudo apt-get install -f 
 
 google_chrome
