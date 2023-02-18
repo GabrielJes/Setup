@@ -39,7 +39,7 @@ verify_package() {
      echo
      echo "Pacote $nome falhou!"
      echo
-     echo "Instalando com outro gerenciador de Pacotes ."
+     echo "Reinstalando. . . ."
      sleep 1
      apf=$app
      barra_de_loading sudo snap install $nome --classic
@@ -79,7 +79,7 @@ sleep 1
 
 escolha() {
 
-read -p "O pacote $nome falhou! gostaria de ignorar esse pacote e partir para o proximo? : " confirm && 
+read -p "O pacote $nome falhou! gostaria de ignorar esse pacote e partir para o proximo ? (Y/N) : " confirm && 
 [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 sleep 1
 
