@@ -63,7 +63,7 @@ nome=$apf
   else echo
      echo 
      echo "Pacote falhou!"
-     sn 
+      
 
   fi
 
