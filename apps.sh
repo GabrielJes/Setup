@@ -47,7 +47,17 @@ echo 'Verificando Pycharm'
 app='pycharm'
 sleep 1
 barra_de_loading 
-menu_pycharm
+verify_pycharm
 sleep 1
+
+# Installer e verify Jupyter
+echo 'Verificando Jupyter' 
+app='jupyter'
+sleep 1
+barra_de_loading
+verify_jupyter
+
+
+
 
 

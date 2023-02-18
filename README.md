@@ -2,16 +2,13 @@
 
 # Installer 
 # Ubuntu 
-$ apt update
-$ apt upgrade
-$ apt install git
-$ apt install boxes
+$ sudo apt install git
 
 # clone dos comandos
 $ git clone https://github.com/GabrielJes/Setup.git
 
 # configuracoes dos comandos linux :
-alias busy='cd ~/Setup/ && bash dependencies.sh' >> .bashrc && source .bashrc
+alias bms='cd ~/Setup/ && bash run.sh' >> .bashrc && source .bashrc
 
 $ busy
 

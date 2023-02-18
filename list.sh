@@ -13,12 +13,11 @@ Net-tools                |                   Discord
 Vim                      |                   Google-chrome
 Plocate                  |                   Spotify
 Neofetch                 |                   pycharm
-Git                      |                   Virtualbox
-Snap                     |                   Jupyter
-
+Git                      |                   Jupyter
+Snap                     |                   
 
 "
-
+sleep 2
 
 
 
