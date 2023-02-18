@@ -112,7 +112,7 @@ verify_apps() {
      sleep 1
      apf=$app
      barra_de_loading 
-     sudo apt install $nome 
+     sudo snap install $nome  --classic
      sleep 1
      verify_funcion $apf
 
@@ -298,4 +298,26 @@ verify_plocate() {
      verify_funcion $apf
 
   fi
+}
+
+verify_discord() {
+    nome=$app
+    pacote=$(dpkg --get-selections | grep "$nome" )  
+    sleep 1
+  if [ -n "$pacote" ] ;
+    then echo
+     echo $nome "ja instalado! "
+     echo
+     sleep 1
+  else echo 
+     echo
+     echo "$nome nao foi identificado!"
+     echo
+     echo "Instalando $nome ."
+     sleep 1
+     apf=$app
+     barra_de_loading 
+     sudo snap install $nome  --classic
+     sleep 1
+     verify_funcion $apf
 }
