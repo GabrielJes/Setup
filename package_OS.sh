@@ -10,13 +10,13 @@ echo
 app="net-tools"
 echo "Instalando net-tools"
 barra_de_loading sudo apt install $app -y
-sleep 1 && verify_package $app
+sleep 1 && verify_net_tools $app
 
 # plocate installer 
 app="plocate"
 echo "Instalando plocate" 
 barra_de_loading sudo apt install plocate -y
-sleep 1 && verify_package $app
+sleep 1 && verify_plocate $app
 
 # vim installer 
 app="vim"

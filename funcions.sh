@@ -250,3 +250,51 @@ verify_jupyter() {
 
   fi
 }
+
+verify_net_tools() {
+    nome=$app
+    pacote=$(dpkg --get-selections | grep "$nome" )  
+    sleep 1
+  if [ -n "$pacote" ] ;
+    then echo
+     echo "Pacote $nome instalado com sucesso! "
+     echo
+     sleep 1
+  else echo 
+     echo
+     echo "Pacote $nome falhou!"
+     echo
+     echo "Reinstalando. . . ."
+     sleep 1
+     apf=$app
+     barra_de_loading 
+     sudo apt install net-tools -y
+     sleep 1
+     verify_funcion $apf
+
+  fi
+}
+
+verify_plocate() {
+    nome=$app
+    pacote=$(dpkg --get-selections | grep "$nome" )  
+    sleep 1
+  if [ -n "$pacote" ] ;
+    then echo
+     echo "Pacote $nome instalado com sucesso! "
+     echo
+     sleep 1
+  else echo 
+     echo
+     echo "Pacote $nome falhou!"
+     echo
+     echo "Reinstalando. . . ."
+     sleep 1
+     apf=$app
+     barra_de_loading 
+     sudo apt install plocate -y
+     sleep 1
+     verify_funcion $apf
+
+  fi
+}
