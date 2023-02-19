@@ -6,6 +6,7 @@ source ./list.sh
 source ./funcions.sh
 
 # Dependencias 
+echo "Loading ."
 loading sudo apt install neofetch -y
 loading source ./funcions.sh 
 loading sudo apt install figlet -y 
