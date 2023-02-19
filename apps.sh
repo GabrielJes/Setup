@@ -7,9 +7,9 @@ source ./funcions.sh
 
 # Installer e verify discord
 echo 'Installing discord'
-app='discord'
 loading
 sudo snap install discord
+echo
 verify_discord
 
 # Installer e verify Steam
