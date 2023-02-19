@@ -23,7 +23,9 @@ verify_net_tools() {
      echo "Installing again ."
      sleep 1
      apf=$name 
-     loading sudo apt install net-tools -y
+     loading
+     
+     sudo apt install net-tools -y
      sleep 1
      verify_funcion $name
 
@@ -47,7 +49,8 @@ verify_locate_install() {
      echo "Installing again ."
      sleep 1
      apf=$name 
-     loading sudo apt install locate -y
+     loading 
+     sudo apt install locate -y
      sleep 1
      verify_funcion $name
 
@@ -73,7 +76,8 @@ verify_vim() {
      echo "Installing again ."
      sleep 1
      apf=$name 
-     loading sudo apt install vim -y
+     loading 
+     sudo apt install vim -y
      sleep 1
      verify_funcion $name
 
@@ -98,7 +102,8 @@ verify_git() {
      echo "Installing again ."
      sleep 1
      apf=$name 
-     loading sudo apt install git -y
+     loading 
+     sudo apt install git -y
      sleep 1
      verify_funcion $name
 
@@ -123,7 +128,8 @@ verify_snap() {
      echo "Installing again ."
      sleep 1
      apf=$name 
-     loading sudo apt install snapd -y
+     loading 
+     sudo apt install snapd -y
      sleep 1
      verify_funcion $name
 
@@ -148,7 +154,8 @@ verify_wget() {
      echo "Installing again ."
      sleep 1
      apf=$name 
-     loading sudo apt install wget -y
+     loading 
+     sudo apt install wget -y
      sleep 1
      verify_funcion $name
 
