@@ -72,14 +72,17 @@ nome=$apf
 
 install_steam() {
 
+echo "Instalando steam "
 loading 
-sudo dpkg --add-architecture i386
+sudo dpkg --add-architecture i386 -y
 sleep 1
 loading 
 sudo apt update
 sleep 1
 loading 
-sudo apt install wget gdebi-core libgl1-mesa-glx:i386
+sudo apt install wget gdebi-core libgl1-mesa-glx:i386 -y
+sleep 1
+echo "Downloading"
 sleep 1
 wget -O ~/steam.deb http://media.steampowered.com/client/installer/steam.deb
 sleep 1
