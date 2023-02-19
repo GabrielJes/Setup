@@ -1,32 +1,5 @@
 #!/bin/bash
 
-# loading 100
-
-barra_de_loading() {
-
-    #Barra de progresso
-    declare -r STEPS=('step1','step2','step3','step4')
-    declare -r MAX_STEPS=${#STEPS[@]}
-
-    # Tamanho maximo da barrinha quando completar o loading
-    declare -r BAR_TAMANHO="################"
-
-    # Calcula o tamano da string
-    declare -r MAX_BAR_TAMANHO=${#BAR_TAMANHO}
-
-    for step in "${!STEPS[@]}"; do
-    perc=$(((step + 1) * 100 / MAX_STEPS))
-
-    # Calcula o ultimo caracter da barrinha 
-    percBAR=$((perc * MAX_BAR_TAMANHO / 100))
-    
-    #exibindo barrinha
-    echo -n "[${BAR_TAMANHO:0:percBAR}] $perc %  " 
-    echo "."
-
-    done
-} 
-
 # S/n para continuar ou fechar o comando
 sim_ou_nao() {
 
@@ -68,10 +41,4 @@ nome=$apf
      escolha  
 
   fi
-}
-
-install_steam() {
-
-sudo apt install steam
-
 }
