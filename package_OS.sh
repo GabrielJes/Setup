@@ -11,7 +11,7 @@ echo
 # Net-tools installer
 app="net-tools"
 echo "Instalando net-tools"
-ProgressBar && sudo apt install $app -y
+loading && sudo apt install $app -y
 sleep 1 && verify_net_tools $app
 
 # plocate installer 
