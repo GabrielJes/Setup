@@ -45,7 +45,7 @@ verify_steam() {
      echo "Instalando $nome ."
      sleep 1
      apf=$app
-     loading install_steam
+     loading sudo apt install steam
      sleep 1
      verify_funcion $apf
 
