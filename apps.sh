@@ -27,7 +27,6 @@ sleep 1
 echo 'Installing google-chrome'
 app='google-chrome'
 loading
-google_installer
 verify_google_chrome
 sleep 1
 
