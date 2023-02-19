@@ -51,11 +51,13 @@ sleep 1 && verify_wget $app
 # Atualizando pacotes
 sleep 1
 echo ' [ Atualizando os pacotes do sistema ] ' && sleep 1
+echo
 loading sudo apt upgrade -y
 sleep 1
 
 # versao do sistema operacional atual
 echo ' [ Setup atual ] ' && sleep 1
+echo
 neofetch
 source ./apps.sh
 

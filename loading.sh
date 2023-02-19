@@ -1,9 +1,7 @@
 #!/bin/bash
 loading(){
 
-#!/bin/sh
-
-BAR='####################'   
+BAR='#####################'   
 
 for i in {1..20}; do
     echo -ne "\r${BAR:0:$i}" 

@@ -50,3 +50,22 @@ read -p "Você gostaria de iniciar com os pacotes e aplicativos atuais? (Y/N): "
 [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 sleep 1
 }
+
+# fucao para verificar a verificacao esta funcioinando bem, e uma especie de 2 check
+verify_funcion(){
+
+nome=$apf
+    pacote=$(dpkg --get-selections | grep "$nome" )  
+    sleep 1
+  if [ -n "$pacote" ] ;
+    then echo
+     echo $nome" instalado com sucesso! "
+     echo
+     sleep 1
+  else echo
+     echo 
+     echo "Pacote $nome falhou!"
+     escolha  
+
+  fi
+}
