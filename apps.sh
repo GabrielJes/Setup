@@ -8,6 +8,7 @@ source ./funcions.sh
 # Installer e verify discord
 echo 'Installing discord'
 loading
+echo
 sudo snap install discord
 echo
 verify_discord

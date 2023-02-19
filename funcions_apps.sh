@@ -80,7 +80,7 @@ verify_google_chrome() {
 
 # Funcao dedicada para instalacao vscode 
 verify_code() {
-    nome=$app
+    nome=code
     pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
   if [ -n "$pacote" ] ;
