@@ -32,7 +32,7 @@ verify_net_tools() {
 }
 
 verify_locate_install() {
-    name_package='locate'
+    name_package='mlocate'
     name=$name_package
     pacote=$(dpkg --get-selections | grep "$name" )  
     sleep 1
@@ -49,7 +49,7 @@ verify_locate_install() {
      sleep 1
      apf=$name 
      loading 
-     sudo apt install locate -y
+     sudo apt install mlocate -y
      sleep 1
      verify_funcion $name
 
