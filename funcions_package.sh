@@ -121,7 +121,7 @@ verify_snap() {
      sleep 1
      apf=$app
      barra_de_loading 
-     sudo apt install $nome  -y
+     sudo apt install snap -y
      sleep 1
      verify_funcion $apf
 
@@ -146,7 +146,7 @@ verify_wget() {
      sleep 1
      apf=$app
      barra_de_loading 
-     sudo apt install $nome  -y
+     sudo apt install wget -y
      sleep 1
      verify_funcion $apf
 
