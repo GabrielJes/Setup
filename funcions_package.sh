@@ -48,7 +48,7 @@ verify_locate() {
      loading
      sudo apt install locate -y
      sleep 1
-     verify_funcion $apf
+     verify_funcion 
 }
 
 
@@ -76,7 +76,7 @@ verify_vim() {
      loading 
      sudo apt install vim 
      sleep 1
-     verify_funcion $apf
+     verify_funcion 
 
   fi
 }
