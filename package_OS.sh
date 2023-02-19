@@ -1,4 +1,5 @@
 #!/bin/bash 
+
 source ./funcions_package.sh
 source ./loading.sh
 
