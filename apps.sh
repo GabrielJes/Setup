@@ -16,7 +16,7 @@ verify_discord
 echo 'Verificando Steam'
 app='steam'
 sleep 1
-loading 
+loading install_steam
 verify_steam
 
 # Installer e verify Google-chrome 
