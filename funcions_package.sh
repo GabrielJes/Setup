@@ -71,7 +71,7 @@ verify_vim() {
      sleep 1
      apf=$app
      loading 
-     sudo apt install vim -y
+     sudo apt install vim 
      sleep 1
      verify_funcion $apf
 
