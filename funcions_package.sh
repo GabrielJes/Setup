@@ -20,7 +20,7 @@ verify_net_tools() {
      echo "Instalando $nome . . . ."
      sleep 1
      apf=$app
-     loading sudo apt install net-tools -y
+     loading & sudo apt install net-tools -y
      sleep 1
      verify_funcion $apf
 
