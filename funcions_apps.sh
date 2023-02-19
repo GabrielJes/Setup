@@ -213,3 +213,18 @@ verify_jupyter() {
 
   fi
 }
+
+
+google_installer(){
+# Installer 
+echo "Installing"
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sleep 1
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+echo 
+sudo apt-get install -f
+sleep 1
+# // 
+google-chrome
+
+}
