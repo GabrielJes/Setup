@@ -1,6 +1,7 @@
 #!bin/bash
 source ./funcions_apps.sh
 source ./loading.sh
+source ./funcions.sh
 
 # Inicio
 sleep 1
@@ -16,7 +17,8 @@ verify_discord
 echo 'Verificando Steam'
 app='steam'
 sleep 1
-loading install_steam
+loading 
+install_steam
 verify_steam
 
 # Installer e verify Google-chrome 
