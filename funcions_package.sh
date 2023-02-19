@@ -30,6 +30,7 @@ verify_net_tools() {
 
 
 verify_locate() {
+
     nome=$app
     pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
@@ -49,7 +50,10 @@ verify_locate() {
      sudo apt install locate -y
      sleep 1
      verify_funcion $apf
+
 }
+    
+
 
 sleep 30
 
