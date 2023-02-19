@@ -21,6 +21,7 @@ verify_discord() {
      sleep 1
      apf=$app
      loading 
+     echo
      sudo snap install discord
      sleep 1
      verify_funcion_snap $apf
