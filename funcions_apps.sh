@@ -78,7 +78,7 @@ verify_google_chrome() {
 # Funcao dedicada para instalacao vscode 
 verify_code() {
     nome="vscode"
-    pacote=$(find . -name "vscode.png" | grep "vscode.png" )
+    pacote=$(locate -b "packages.microsoft.com_repos_vscode_dists_stable_InRelease"  | locate -b "vscode" )
   if [ -n "$pacote" ] ;
     then echo
      echo $nome "Installed! "
@@ -102,7 +102,7 @@ verify_code() {
 }
 # Funcao dedicada para instalacao do spotify
 verify_spotify() {
-    pacote=$(locate "spotify.desktop" | grep "spotify.desktop" )
+    pacote=$(locate -b "snap.spotify.spotify.src" | grep "spotify.desktop" )
     nome_pacote=$app
     pacote=$(snap find $nome | grep $nome )
   if [ -n "$pacote" ] ;
