@@ -36,7 +36,6 @@ verify_steam() {
   if [ -n "$pacote" ] ;
     then echo
      echo $nome "Installed! "
-     sudo dpkg --configure -a 
      echo
      sleep 1
   else echo 
@@ -77,7 +76,7 @@ verify_google_chrome() {
 
 # Funcao dedicada para instalacao vscode 
 verify_code() {
-    nome=code
+    nome=vscode
     pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
   if [ -n "$pacote" ] ;
