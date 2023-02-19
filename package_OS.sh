@@ -1,6 +1,6 @@
 #!/bin/bash 
 source ./funcions_package.sh
-
+source ./loading.sh
 
 # Install dependencies packages
 echo "Instalando dependencias" 
@@ -11,8 +11,7 @@ echo
 # Net-tools installer
 app="net-tools"
 echo "Instalando net-tools"
-barra_de_loading 
-sudo apt install $app -y
+ProgressBar sudo apt install $app -y
 sleep 1 && verify_net_tools $app
 
 # plocate installer 
@@ -51,7 +50,7 @@ app="wget"
 echo "Instalando wget"
 barra_de_loading 
 sudo apt install wget -y
-sleep 1 && wget $app
+sleep 1 && verify_wget $app
 # finished installing || 
 
 # Atualizando pacotes
