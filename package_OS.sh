@@ -11,7 +11,6 @@ echo
 # Net-tools installer
 app="net-tools"
 echo " Verificando net-tools"
-loading sudo apt install $app 
 sleep 1  
 verify_net_tools $app
 
