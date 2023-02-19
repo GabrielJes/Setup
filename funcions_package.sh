@@ -28,8 +28,7 @@ verify_net_tools() {
   fi
 }
 
-
-verify_locate() {
+verify_locate_install() {
     nome=$app
     pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
