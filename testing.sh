@@ -5,7 +5,7 @@ source ./loading.sh
 
 verify_code() {
     nome="vscode"
-    pacote=$(locate -b "packages.microsoft.com_repos_vscode_dists_stable_InRelease"  | grep "packages.microsoft.com_repos_vscode_dists_stable_InRelease" )
+    pacote=$(locate -b "packages.microsoft.com_repos_vscode_dists_stable_InRelease"  | locate -b "vscode" )
   if [ -n "$pacote" ] ;
     then echo
      echo $nome "Installed! "
