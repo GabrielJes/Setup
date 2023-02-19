@@ -102,9 +102,8 @@ verify_code() {
 }
 # Funcao dedicada para instalacao do spotify
 verify_spotify() {
-    pacote=$(locate -b "snap.spotify.spotify.src" | locate -b "spotify.desktop" )
+    pacote=$(locate -b "snap.spotify.spotify.src" | locate -b "spotify.desktop")
     nome_pacote=$app
-    pacote=$(snap find $nome | grep $nome )
   if [ -n "$pacote" ] ;
     then echo
      echo "$nome_pacote Installed! "
