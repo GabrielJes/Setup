@@ -12,58 +12,66 @@ echo
 app="net-tools"
 echo "Instalando net-tools"
 loading
-sudo apt install $app -y
-sleep 1 && verify_net_tools $app
+sudo apt install $app 
+sleep 1  
+verify_net_tools $app
 
 # plocate installer 
 app="plocate"
 echo "Instalando plocate" 
 loading
-sudo apt install plocate -y
-sleep 1 && verify_plocate $app
+sudo apt install plocate 
+sleep 1
+verify_plocate $app
 
 # vim installer 
 app="vim"
 echo "Instalando vim"
 loading
-sudo apt install vim -y
-sleep 1 && verify_vim $app
+sudo apt install vim 
+sleep 1
+verify_vim $app
 
 
 # git installer 
 app="git"
 echo "Instalando git"
 loading 
-sudo apt install git -y
-sleep 1 && verify_git $app
+sudo apt install git 
+sleep 1
+verify_git $app
 
 
 # snap installer 
 app="snap"
 echo "Instalando snap"
 loading 
-sudo apt install snap -y 
-sleep 1 && verify_snap $app
+sudo apt install snap 
+sleep 1
+verify_snap $app
 
 
 # wget installer 
 app="wget"
 echo "Instalando wget"
 loading 
-sudo apt install wget -y
-sleep 1 && verify_wget $app
+sudo apt install wget 
+sleep 1
+verify_wget $app
 # finished installing || 
 
 # Atualizando pacotes
 sleep 1
-echo ' [ Atualizando os pacotes do sistema ] ' && sleep 1
+echo ' [ Atualizando os pacotes do sistema ] '
+sleep 1
 echo
 loading 
 sudo apt upgrade -y
 sleep 1
 
 # versao do sistema operacional atual
-echo ' [ Setup atual ] ' && sleep 1
+echo ' [ Setup atual ] '
+sleep 1
 echo
 neofetch
 source ./apps.sh
