@@ -1,6 +1,6 @@
 #!bin/bash
 source ./funcions_apps.sh
-source ./loading
+source ./loading.sh
 
 # Inicio
 sleep 1
