@@ -18,13 +18,12 @@ verify_net_tools() {
      sleep 1
   else echo 
      echo
-     echo "package $name was not installed correctly!"
+     echo "package $name_package was not installed correctly!"
      echo
      echo "Installing again ."
      sleep 1
      apf=$name 
-     loading
-     sudo apt install net-tools -y
+     loading sudo apt install net-tools -y
      sleep 1
      verify_funcion $name
 
@@ -32,125 +31,126 @@ verify_net_tools() {
 }
 
 verify_locate_install() {
-    name=$app
+    name_package='locate'
+    name=$name_package
     pacote=$(dpkg --get-selections | grep "$name" )  
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "$name instalado ! "
+     echo "Installed! "
      echo
      sleep 1
   else echo 
      echo
-     echo "Pacote $name nao encontrado !"
+     echo "package $name_package was not installed correctly!"
      echo
-     echo "Instalando $name . . . ."
+     echo "Installing again ."
      sleep 1
-     apf=$app
-     loading
-     sudo apt install locate -y
+     apf=$name 
+     loading sudo apt install locate -y
      sleep 1
-     verify_funcion $apf
+     verify_funcion $name
+
   fi  
 
 }
 
 # Vim
 verify_vim() {
-    name=$app
+    name_package='vim'
+    name=$name_package
     pacote=$(dpkg --get-selections | grep "$name" )  
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "$name instalado "
+     echo "Installed! "
      echo
      sleep 1
   else echo 
      echo
-     echo "Pacote $name nao encontrado"
+     echo "package $name_package was not installed correctly!"
      echo
-     echo "Instalando $name . . . ."
+     echo "Installing again ."
      sleep 1
-     apf=$app
-     loading 
-     sudo apt install vim 
+     apf=$name 
+     loading sudo apt install vim -y
      sleep 1
-     verify_funcion $apf
+     verify_funcion $name
 
   fi
 }
 
 # Git
 verify_git() {
-    name=$app
+    name_package='git'
+    name=$name_package
     pacote=$(dpkg --get-selections | grep "$name" )  
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "$name instalado ! "
+     echo "Installed! "
      echo
      sleep 1
   else echo 
      echo
-     echo "Pacote $name nao encontrado"
+     echo "package $name_package was not installed correctly!"
      echo
-     echo "Instalando $name . . . ."
+     echo "Installing again ."
      sleep 1
-     apf=$app
-     loading 
-     sudo apt install $name -y
+     apf=$name 
+     loading sudo apt install git -y
      sleep 1
-     verify_funcion $apf
+     verify_funcion $name
 
   fi
 }
 
 # snap
 verify_snap() {
-    name=$app
+    name_package='snap'
+    name=$name_package
     pacote=$(dpkg --get-selections | grep "$name" )  
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "$name instalado!"
+     echo "Installed! "
      echo
      sleep 1
   else echo 
      echo
-     echo "$name nao foi identificado!"
+     echo "package $name_package was not installed correctly!"
      echo
-     echo "Instalando $name ."
+     echo "Installing again ."
      sleep 1
-     apf=$app
-     loading 
-     sudo apt install snap -y
+     apf=$name 
+     loading sudo apt install snapd -y
      sleep 1
-     verify_funcion $apf
+     verify_funcion $name
 
   fi
 }
 
 # Wget
 verify_wget() {
-    name=$app
+    name_package='wget'
+    name=$name_package
     pacote=$(dpkg --get-selections | grep "$name" )  
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "$name instalado!"
+     echo "Installed! "
      echo
      sleep 1
   else echo 
      echo
-     echo "$name nao foi identificado!"
+     echo "package $name_package was not installed correctly!"
      echo
-     echo "Instalando $name ."
+     echo "Installing again ."
      sleep 1
-     apf=$app
-     loading 
-     sudo apt install wget -y
+     apf=$name 
+     loading sudo apt install wget -y
      sleep 1
-     verify_funcion $apf
+     verify_funcion $name
 
   fi
 }
