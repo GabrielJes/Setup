@@ -3,7 +3,7 @@
 # Start 
 source ./loading.sh
 source ./list.sh
-source ./funcios.sh
+source ./funcions.sh
 
 # Dependencias 
 loading sudo apt install neofetch -y
