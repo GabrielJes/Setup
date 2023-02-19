@@ -77,7 +77,7 @@ verify_google_chrome() {
 # Funcao dedicada para instalacao vscode 
 verify_code() {
     nome="vscode"
-    pacote=$(snap find $nome | grep $nome )
+    pacote=$(locate vscode.png | grep vscode.png )
   if [ -n "$pacote" ] ;
     then echo
      echo $nome "Installed! "
@@ -97,7 +97,6 @@ verify_code() {
 
   fi
 }
-
 # Funcao dedicada para instalacao do spotify
 verify_spotify() {
     nome="spotify" || "Spotify" || "spotify"
