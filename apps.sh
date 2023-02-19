@@ -1,5 +1,6 @@
 #!bin/bash
 source ./funcions_apps.sh
+source ./loading
 
 # Inicio
 sleep 1
@@ -8,7 +9,7 @@ sleep 1
 echo 'Verificando discord'
 app='discord'
 sleep 1
-loading 
+loading
 verify_discord
 
 # Installer e verify Steam
