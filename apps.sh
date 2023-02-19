@@ -8,8 +8,8 @@ source ./funcions.sh
 # Installer e verify discord
 echo 'Installing discord'
 loading
-sudo snap install discord
 echo
+sudo snap install discord
 verify_discord
 sleep 1
 
