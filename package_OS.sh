@@ -5,37 +5,37 @@ source ./funcions_package.sh
 
 # Start installer ||
 # Net-tools installer="net-tools"
-echo " Installing net-tools"
+echo "Installing net-tools"
 loading  
-verify_net_tools
+verify_net_tools 
 
 # plocate installer ="locate"
 echo "Installing locate"
 loading  
-verify_locate_install $app
+verify_locate_install 
 
 # vim installer ="vim"
 echo "Installing vim"
 loading 
-verify_vim $app
+verify_vim 
 
 
 # git installer ="git"
 echo "Installing git"
 loading 
-verify_git $app
+verify_git 
 
 
 # snap installer 
 echo "Installing snap"
 loading 
-verify_snap $app
+verify_snap 
 
 
 # wget installer 
 echo "Installing wget"
 loading 
-verify_wget $app
+verify_wget 
 # finished installing || 
 
 echo 'Atualizando os pacotes do sistema'
