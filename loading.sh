@@ -1,13 +1,13 @@
 #!/bin/bash
-
-
-
 loading(){
-sp='/-\|'
-printf ' '
-while true; do
-    printf '\b%.1s' "$sp"
-    sp=${sp#?}${sp%???}
+
+#!/bin/sh
+
+BAR='####################'   
+
+for i in {1..20}; do
+    echo -ne "\r${BAR:0:$i}" 
+    sleep .1                 
 done
 
 }
