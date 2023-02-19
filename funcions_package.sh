@@ -24,7 +24,6 @@ verify_net_tools() {
      sleep 1
      apf=$name 
      loading
-     
      sudo apt install net-tools -y
      sleep 1
      verify_funcion $name
