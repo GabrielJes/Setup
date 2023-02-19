@@ -46,7 +46,7 @@ verify_plocate() {
      sleep 1
      apf=$app
      barra_de_loading 
-     sudo apt install plocate -y
+     sudo apt install plocate 
      sleep 1
      verify_funcion $apf
 
