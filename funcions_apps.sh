@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source ./loading.sh
 # Funcoes para instalar os aplicativos:
 
 # Funcao dedicada para instalacao do discord
@@ -19,7 +19,7 @@ verify_discord() {
      echo "Instalando $nome ."
      sleep 1
      apf=$app
-     barra_de_loading 
+     loading 
      sudo snap install $nome 
      sleep 1
      verify_funcion_snap $apf
@@ -44,7 +44,7 @@ verify_steam() {
      echo "Instalando $nome ."
      sleep 1
      apf=$app
-     barra_de_loading 
+     loading 
      sudo apt install steam -y
      sleep 1
      verify_funcion $apf
@@ -72,7 +72,7 @@ verify_google_chorme() {
      echo "Download em andamento"
      sleep 2
      wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-     barra_de_loading  sudo dpkg -i google-chrome-stable_current_amd64.deb && sudo apt-get install -f 
+     loading  sudo dpkg -i google-chrome-stable_current_amd64.deb && sudo apt-get install -f 
 
      google_chrome
 
@@ -98,7 +98,7 @@ verify_code() {
      echo "Instalando $nome ."
      sleep 1
      apf=$app
-     barra_de_loading 
+     loading 
      sudo apt install code -y
      sleep 1
      verify_funcion $apf
@@ -123,7 +123,7 @@ verify_spotify() {
      echo "Instalando $nome ."
      sleep 1
      apf=$app
-     barra_de_loading sudo snap install $nome --classic
+     loading sudo snap install $nome --classic
      sleep 1
      verify_funcion $apf
 # // \\\
@@ -147,21 +147,21 @@ case $n in
   echo
   echo "Instalando Pycharm - educational " 
   sleep 1
-  barra_de_loading sudo snap install pycharm-educational --classic
+  loading sudo snap install pycharm-educational --classic
   verify_apps ;;
 
   2) echo "Pycharm - professional " 
   echo
   echo "Instalando Pycharm - professional " 
   sleep 1
-  barra_de_loading sudo snap install pycharm-professional --classic
+  loading sudo snap install pycharm-professional --classic
   verify_apps ;;
 
   3) echo "Pycharm - community " 
   echo
   echo "Instalando Pycharm - community " 
   sleep 1
-  barra_de_loading sudo snap install pycharm-community --classic
+  loading sudo snap install pycharm-community --classic
   verify_apps ;; 
   
   *) echo "invalid option";;
@@ -210,7 +210,7 @@ verify_jupyter() {
      echo "Instalando $nome ."
      sleep 1
      apf=$app
-     barra_de_loading 
+     loading 
      sudo apt-get -y  install jupyter
      verify_funcion $apf
 
