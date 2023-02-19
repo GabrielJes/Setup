@@ -99,7 +99,7 @@ verify_code() {
 }
 # Funcao dedicada para instalacao do spotify
 verify_spotify() {
-    pacote=$(locate spotify.desktop | grep spotify.desktop )
+    pacote=$(locate "spotify.desktop" | grep "spotify.desktop" )
     nome_pacote=$app
     pacote=$(snap find $nome | grep $nome )
   if [ -n "$pacote" ] ;

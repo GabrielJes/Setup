@@ -36,6 +36,7 @@ sleep 1
 echo 'Installing vscode'
 app='code'
 loading 
+echo
 verify_code
 sleep 1
 
