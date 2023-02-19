@@ -10,6 +10,7 @@ echo "Loading ."
 loading sudo apt install neofetch -y
 loading source ./funcions.sh 
 loading sudo apt install figlet -y 
+echo
 figlet "Bem-vindo"
 
 # loop s/n 
