@@ -3,28 +3,28 @@ source ./funcions_package.sh
 source ./loading.sh
 
 # Install dependencies packages
-echo "Instalando dependencias" 
+echo " Verificando dependencias" 
 sleep 1 
 echo
 
 # Start installer ||
 # Net-tools installer
 app="net-tools"
-echo "Instalando net-tools"
+echo " Verificando net-tools"
 loading sudo apt install $app 
 sleep 1  
 verify_net_tools $app
 
 # plocate installer 
 app="plocate"
-echo "Instalando plocate" 
+echo " Verificando plocate" 
 loading sudo apt install plocate 
 sleep 1
 verify_plocate $app
 
 # vim installer 
 app="vim"
-echo "Instalando vim"
+echo " Verificando vim"
 loading sudo apt install vim 
 sleep 1
 verify_vim $app
@@ -32,7 +32,7 @@ verify_vim $app
 
 # git installer 
 app="git"
-echo "Instalando git"
+echo " Verificando git"
 loading sudo apt install git 
 sleep 1
 verify_git $app
@@ -40,7 +40,7 @@ verify_git $app
 
 # snap installer 
 app="snap"
-echo "Instalando snap"
+echo " Verificando snap"
 loading sudo apt install snap 
 sleep 1
 verify_snap $app
@@ -48,7 +48,7 @@ verify_snap $app
 
 # wget installer 
 app="wget"
-echo "Instalando wget"
+echo " Verificando wget"
 loading sudo apt install wget 
 sleep 1
 verify_wget $app

@@ -46,7 +46,7 @@ verify_plocate() {
      sleep 1
      apf=$app
      loading 
-     sudo apt install plocate 
+     sudo apt install locate 
      sleep 1
      verify_funcion $apf
 
