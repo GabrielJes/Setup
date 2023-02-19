@@ -11,6 +11,7 @@ echo
 # Net-tools installer
 app="net-tools"
 echo " Verificando net-tools"
+loading
 sleep 1  
 verify_net_tools $app
 
