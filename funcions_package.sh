@@ -1,5 +1,6 @@
 #!/bin/bash
 source ./funcions.sh
+source ./loading.sh
 
 # Funcoes de verificacao dos pacotes :
 
@@ -49,11 +50,6 @@ verify_locate_install() {
      sleep 1
      verify_funcion 
 }
-
-
-echo "pausaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-
-sleep 30
 
 # Vim
 verify_vim() {
