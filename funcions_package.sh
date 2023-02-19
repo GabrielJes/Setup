@@ -49,6 +49,8 @@ verify_locate_install() {
      sudo apt install locate -y
      sleep 1
      verify_funcion 
+  fi  
+  
 }
 
 # Vim

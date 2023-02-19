@@ -14,7 +14,7 @@ verify_net_tools
 echo " Verificando locate" 
 loading  
 sleep 1
-verify_locate 
+verify_locate_install
 
 # vim installer ="vim"
 echo " Verificando vim"
