@@ -76,7 +76,7 @@ verify_google_chrome() {
 
 # Funcao dedicada para instalacao vscode 
 verify_code() {
-    nome="code" || "vscode" || "VScode"
+    nome="vscode" || "code" || "VScode"
     nome_pacote=$app
     pacote=$(snap find $nome | grep $nome )
   if [ -n "$pacote" ] ;
