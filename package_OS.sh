@@ -1,59 +1,48 @@
 #!/bin/bash 
 
-source ./funcions_package.sh
 source ./loading.sh
-
-# Install dependencies packages
-echo " Verificando dependencias" 
-sleep 1 
-echo
+source ./funcions_package.sh
 
 # Start installer ||
-# Net-tools installer
-app="net-tools"
+# Net-tools installer="net-tools"
 echo " Verificando net-tools"
 loading
 sleep 1  
-verify_net_tools $app
+verify_net_tools 
 
-# plocate installer 
-app="locate"
+# plocate installer ="locate"
 echo " Verificando locate" 
 loading  
 sleep 1
-verify_locate $app
+verify_locate 
 
-# vim installer 
-app="vim"
+# vim installer ="vim"
 echo " Verificando vim"
 loading 
 sudo apt install vim 
 sleep 1
-verify_vim $app
+verify_vim 
 
 
-# git installer 
-app="git"
+# git installer ="git"
 echo " Verificando git"
 loading sudo apt install git 
 sleep 1
-verify_git $app
+verify_git 
 
 
-# snap installer 
-app="snap"
+# snap installer ="snap"
 echo " Verificando snap"
 loading sudo apt install snap 
 sleep 1
-verify_snap $app
+verify_snap 
 
 
-# wget installer 
-app="wget"
+# wget installer ="wget"
 echo " Verificando wget"
 loading sudo apt install wget 
 sleep 1
-verify_wget $app
+verify_wget 
 # finished installing || 
 
 # Atualizando pacotes
