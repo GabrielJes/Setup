@@ -20,7 +20,7 @@ app="locate"
 echo " Verificando locate" 
 loading  
 sleep 1
-verify_plocate $app
+verify_locate $app
 
 # vim installer 
 app="vim"
