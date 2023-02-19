@@ -20,7 +20,7 @@ verify_net_tools() {
      echo "Instalando $nome . . . ."
      sleep 1
      apf=$app
-     barra_de_loading 
+     loading 
      sudo apt install net-tools -y
      sleep 1
      verify_funcion $apf
@@ -45,7 +45,7 @@ verify_plocate() {
      echo "Instalando $nome . . . ."
      sleep 1
      apf=$app
-     barra_de_loading 
+     loading 
      sudo apt install plocate 
      sleep 1
      verify_funcion $apf
@@ -70,7 +70,7 @@ verify_vim() {
      echo "Instalando $nome . . . ."
      sleep 1
      apf=$app
-     barra_de_loading 
+     loading 
      sudo apt install vim -y
      sleep 1
      verify_funcion $apf
@@ -95,7 +95,7 @@ verify_git() {
      echo "Instalando $nome . . . ."
      sleep 1
      apf=$app
-     barra_de_loading 
+     loading 
      sudo apt install $nome -y
      sleep 1
      verify_funcion $apf
@@ -120,7 +120,7 @@ verify_snap() {
      echo "Instalando $nome ."
      sleep 1
      apf=$app
-     barra_de_loading 
+     loading 
      sudo apt install snap -y
      sleep 1
      verify_funcion $apf
@@ -145,7 +145,7 @@ verify_wget() {
      echo "Instalando $nome ."
      sleep 1
      apf=$app
-     barra_de_loading 
+     loading 
      sudo apt install wget -y
      sleep 1
      verify_funcion $apf
