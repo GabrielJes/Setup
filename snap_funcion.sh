@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source ./funcions.sh
 
 # Verificando instalacao do spotify
 verify_spotify() {
@@ -48,4 +49,19 @@ verify_pycharm() {
      verify_funcion $apf
 
   fi
+}
+
+verify_funcion_snap(){
+    nome=$app
+    pacote=$(snap find $nome | grep $nome )  
+    sleep 1
+  if [ -n "$pacote" ] ;
+    then echo
+     echo $nome "Installed! "
+     echo
+     sleep 1
+  else echo 
+     echo
+     echo "Package $nome was not installed correctly!"
+     escolha
 }

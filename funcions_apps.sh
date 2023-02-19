@@ -10,18 +10,18 @@ verify_discord() {
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo $nome "ja instalado! "
+     echo $nome "Installed! "
      echo
      sleep 1
   else echo 
      echo
-     echo "$nome nao foi identificado! "
+     echo "Package $nome was not installed correctly!"
      echo
-     echo "Instalando $nome ."
+     echo "Installing again ."
      sleep 1
      apf=$app
      loading 
-     sudo snap install $nome 
+     sudo snap install discord
      sleep 1
      verify_funcion_snap $apf
 
@@ -73,9 +73,6 @@ verify_google_chorme() {
      sleep 2
      wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
      loading  sudo dpkg -i google-chrome-stable_current_amd64.deb && sudo apt-get install -f 
-
-     google_chrome
-
      sleep 1
      verify_funcion $apf
   fi
