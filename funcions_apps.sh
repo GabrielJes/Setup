@@ -1,5 +1,6 @@
 #!/bin/bash
 source ./loading.sh
+source ./funcions.sh
 # Funcoes para instalar os aplicativos:
 
 # Funcao dedicada para instalacao do discord
