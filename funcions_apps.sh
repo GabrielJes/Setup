@@ -36,6 +36,7 @@ verify_steam() {
   if [ -n "$pacote" ] ;
     then echo
      echo $nome "Installed! "
+     sudo dpkg --configure -a 
      echo
      sleep 1
   else echo 
