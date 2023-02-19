@@ -92,7 +92,7 @@ verify_code() {
      sleep 1
      apf=$app
      loading 
-     sudo apt install code -y
+     sudo snap install code
      sleep 1
      verify_funcion $apf
 
