@@ -78,7 +78,7 @@ verify_google_chrome() {
 # Funcao dedicada para instalacao vscode 
 verify_code() {
     nome="vscode"
-    pacote=$(locate "vscode.png" | grep "vscode.png" )
+    pacote=$(find . -name "vscode.png" | grep "vscode.png" )
   if [ -n "$pacote" ] ;
     then echo
      echo $nome "Installed! "
