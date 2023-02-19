@@ -23,6 +23,7 @@ verify_steam
 echo 'Installing google-chrome'
 app='google-chrome'
 loading
+google_installer
 verify_google_chrome
 
 # Installer e verify vscode
