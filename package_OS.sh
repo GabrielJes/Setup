@@ -1,59 +1,59 @@
 #!/bin/bash 
 
-# Install dependencies packages
-echo "Instalando dependencias" 
-sleep 1 
-echo
+source ./loading.sh
+source ./funcions_package.sh
 
 # Start installer ||
-# Net-tools installer
-app="net-tools"
-echo "Instalando net-tools"
-barra_de_loading sudo apt install $app -y
-sleep 1 && verify_net_tools $app
+# Net-tools installer="net-tools"
+echo "Installing net-tools"
+sudo apt-get install net-tools -y
+loading  
+verify_net_tools 
 
-# plocate installer 
-app="plocate"
-echo "Instalando plocate" 
-barra_de_loading sudo apt install plocate -y
-sleep 1 && verify_plocate $app
+# plocate installer ="locate"
+echo "Installing locate"
+sudo apt-get install mlocate -y
+loading  
+verify_locate_install 
 
-# vim installer 
-app="vim"
-echo "Instalando vim"
-barra_de_loading sudo apt install vim -y
-sleep 1 && verify_package $app
+# vim installer ="vim"
+echo "Installing vim"
+sudo apt-get install vim -y
+loading 
+verify_vim 
 
 
-# git installer 
-app="git"
-echo "Instalando git"
-barra_de_loading sudo apt install git -y
-sleep 1 && verify_package $app
+# git installer ="git"
+echo "Installing git"
+sudo apt-get install git -y
+loading 
+verify_git 
 
 
 # snap installer 
-app="snap"
-echo "Instalando snap"
-barra_de_loading sudo apt install snap -y 
-sleep 1 && verify_package $app
+echo "Installing snap"
+sudo apt-get install snapd -y
+loading 
+verify_snap 
 
 
 # wget installer 
-app="wget"
-echo "Instalando wget"
-barra_de_loading sudo apt install wget -y
-sleep 1 && verify_package $app
+echo "Installing wget"
+sudo apt-get install wget
+loading 
+verify_wget 
 # finished installing || 
 
-# Atualizando pacotes
-sleep 1
-echo ' [ Atualizando os pacotes do sistema ] ' && sleep 1
-barra_de_loading sudo apt upgrade -y
-sleep 1
+echo 'Atualizando os pacotes do sistema'
+echo
+loading sudo apt upgrade -y
+echo
+sleep 2
 
 # versao do sistema operacional atual
-echo ' [ Setup atual ] ' && sleep 1
+echo "Sistema operacional atual"
+echo
+echo
 neofetch
 source ./apps.sh
 

@@ -1,12 +1,21 @@
 #!/bin/bash
-sudo apt install neofetch -y
-source ./funcions.sh && sudo apt install figlet -y 
+
+# Start 
+source ./loading.sh
+source ./list.sh
+source ./funcions.sh
+
+# Dependencias 
+echo "Loading ."
+loading sudo apt install neofetch -y
+loading source ./funcions.sh 
+loading sudo apt install figlet -y 
+echo
 figlet "Bem-vindo"
-figlet "ao BMS!"
 
 # loop s/n 
-
 sim_ou_nao
-source ./list.sh
+
+# Import
 source ./package_OS.sh
 

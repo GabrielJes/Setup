@@ -1,28 +1,31 @@
 #!bin/bash
+source ./funcions_apps.sh
+source ./loading.sh
+source ./funcions.sh
 
 # Inicio
-source ./funcions.sh
 sleep 1
 
 # Installer e verify discord
 echo 'Verificando discord'
 app='discord'
 sleep 1
-barra_de_loading
+loading
 verify_discord
 
 # Installer e verify Steam
 echo 'Verificando Steam'
 app='steam'
 sleep 1
-barra_de_loading
-verify_apps
+loading 
+install_steam
+verify_steam
 
 # Installer e verify Google-chrome 
 echo 'Verificando google-chrome'
 app='google-chrome'
 sleep 1
-barra_de_loading 
+loading  
 verify_google_chorme
 sleep 1
 
@@ -30,15 +33,15 @@ sleep 1
 echo 'Verificando vscode'
 app='code'
 sleep 1
-barra_de_loading 
-verify_apps
+loading 
+verify_code
 sleep 1
 
 # Installer e verify Spotify
 echo 'Verificando Spotify' 
 app='spotify'
 sleep 1
-barra_de_loading 
+loading 
 verify_spotify
 sleep 1
 
@@ -46,7 +49,7 @@ sleep 1
 echo 'Verificando Pycharm' 
 app='pycharm'
 sleep 1
-barra_de_loading 
+loading 
 verify_pycharm
 sleep 1
 
@@ -54,7 +57,7 @@ sleep 1
 echo 'Verificando Jupyter' 
 app='jupyter'
 sleep 1
-barra_de_loading
+loading 
 verify_jupyter
 
 
