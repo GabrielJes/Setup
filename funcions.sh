@@ -33,7 +33,9 @@ verify_funcion(){
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo $nome" instalado com sucesso! "
+     echo $nome" Installing . "
+     sleep 1
+     echo "Successful ! "
      echo
      sleep 1
   else echo

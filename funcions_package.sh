@@ -13,7 +13,7 @@ verify_net_tools() {
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "$name_package instalado ! "
+     echo "Installed! "
      echo
      sleep 1
   else echo 
