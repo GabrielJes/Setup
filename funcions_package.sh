@@ -85,14 +85,14 @@ verify_git() {
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "Pacote $nome instalado com sucesso! "
+     echo "Pacote $nome ja instalado ! "
      echo
      sleep 1
   else echo 
      echo
-     echo "Pacote $nome falhou!"
+     echo "Pacote $nome nao encontrado"
      echo
-     echo "Reinstalando. . . ."
+     echo "Instalando $nome . . . ."
      sleep 1
      apf=$app
      barra_de_loading 
