@@ -35,14 +35,14 @@ verify_steam() {
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo $nome "ja instalado! "
+     echo $nome "Installed! "
      echo
      sleep 1
   else echo 
      echo
-     echo "$nome nao foi identificado!"
+     echo "Package $nome was not installed correctly!"
      echo
-     echo "Instalando $nome ."
+     echo "Installing again $nome ."
      sleep 1
      apf=$app
      loading sudo apt install steam
@@ -53,21 +53,21 @@ verify_steam() {
 }
 
 # Funcao dedicada para instalacao do google 
-verify_google_chorme() {
+verify_google_chrome() {
     nome="google-chrome" || "google" || "chrome"
     nome_pacote=$app
     pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo $nome_pacote "ja instalado! "
+     echo $nome_pacote "Installed! "
      sleep 1
      echo
   else echo 
      echo
-     echo "$nome_pacote nao foi identificado!"
+     echo "Package $nome_pacote was not installed correctly!"
      echo
-     echo "Instalando $nome ."
+     echo "Installing again $nome ."
      sleep 1
      echo "Download em andamento"
      sleep 2
@@ -85,14 +85,14 @@ verify_code() {
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo $nome "ja instalado! "
+     echo $nome "Installed! "
      echo
      sleep 1
   else echo 
      echo
-     echo "$nome nao foi identificado!"
+     echo "Package $nome was not installed correctly!"
      echo
-     echo "Instalando $nome ."
+     echo "Installing again $nome ."
      sleep 1
      apf=$app
      loading 
@@ -110,14 +110,14 @@ verify_spotify() {
     pacote=$(snap find $nome | grep $nome )
   if [ -n "$pacote" ] ;
     then echo
-     echo "$nome_pacote ja instalado! "
+     echo "$nome_pacote Installed! "
      echo
      sleep 1
   else echo 
      echo
-     echo "Pacote $nome_pacote nao encontrado! "
+     echo "Package $nome_pacote was not installed correctly!"
      echo
-     echo "Instalando $nome ."
+     echo "Installing again $nome ."
      sleep 1
      apf=$app
      loading sudo snap install $nome --classic
@@ -142,21 +142,21 @@ read -n 1 -s n
 case $n in
   1)  echo "Pycharm - educational "
   echo
-  echo "Instalando Pycharm - educational " 
+  echo "Installing again Pycharm - educational " 
   sleep 1
   loading sudo snap install pycharm-educational --classic
   verify_apps ;;
 
   2) echo "Pycharm - professional " 
   echo
-  echo "Instalando Pycharm - professional " 
+  echo "Installing again Pycharm - professional " 
   sleep 1
   loading sudo snap install pycharm-professional --classic
   verify_apps ;;
 
   3) echo "Pycharm - community " 
   echo
-  echo "Instalando Pycharm - community " 
+  echo "Installing again Pycharm - community " 
   sleep 1
   loading sudo snap install pycharm-community --classic
   verify_apps ;; 
@@ -173,14 +173,14 @@ verify_pycharm() {
     pacote=$(snap find $nome | grep $nome )
   if [ -n "$pacote" ] ;
     then echo
-     echo "$nome_pacote ja instalado! "
+     echo "$nome_pacote Installed! "
      echo
      sleep 1
   else echo 
      echo
-     echo "Pacote $nome_pacote nao encontrado! "
+     echo "Package $nome_pacote was not installed correctly!"
      echo
-     echo "Instalando $nome . . ."
+     echo "Installing again $nome . . ."
      sleep 1
      apf=$app
      menu_pycharm
@@ -197,14 +197,14 @@ verify_jupyter() {
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo $nome "ja instalado! "
+     echo $nome "Installed! "
      echo
      sleep 1
   else echo 
      echo
-     echo "$nome nao foi identificado!"
+     echo "Package $nome was not installed correctly!"
      echo
-     echo "Instalando $nome ."
+     echo "Installing again $nome ."
      sleep 1
      apf=$app
      loading 
