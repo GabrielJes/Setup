@@ -45,7 +45,7 @@ verify_steam() {
      sleep 1
      apf=$app
      barra_de_loading 
-     sudo snap install $nome  --classic
+     sudo apt install steam -y
      sleep 1
      verify_funcion $apf
 
