@@ -93,6 +93,7 @@ verify_code() {
      echo
      apf=$app
      loading 
+     echo
      sudo snap install code --classic 
      sleep 1
      verify_funcion $apf
