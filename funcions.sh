@@ -12,7 +12,7 @@ sleep 1
 # Mesma funcao de escolha mas dessa vez dedicada apenas a verificacao de pacotes
 escolha() {
 
-read -p "O pacote $nome falhou! gostaria de ignorar esse pacote e partir para o proximo ? (Y/N) : " confirm && 
+read -p "O $nome package failed! gostaria de ignorar esse pacote e partir para o proximo ? (Y/N) : " confirm && 
 [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 sleep 1
 echo
@@ -40,7 +40,7 @@ verify_funcion(){
      sleep 1
   else echo
      echo 
-     echo "Pacote $nome falhou!"
+     echo "Package $nome  failed! "
      escolha  
 
   fi
