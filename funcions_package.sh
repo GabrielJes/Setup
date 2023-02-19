@@ -23,13 +23,13 @@ verify_net_tools() {
      loading
      sudo apt install net-tools -y
      sleep 1
-     verify_funcion $apf
+     verify_funcion
 
   fi
 }
 
 
-verify_locate(){
+verify_locate() {
     nome=$app
     pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
@@ -50,8 +50,6 @@ verify_locate(){
      sleep 1
      verify_funcion $apf
 }
-
-
 
 
 echo "pausaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"

@@ -1,7 +1,7 @@
 # Lista de aplicativos 
 
 echo "Iniciando lista de aplicativos"
-sleep 3
+sleep 2
 echo "
 
 lista :
@@ -17,7 +17,7 @@ Git                      |                   Jupyter
 Snap                     |                   
 
 "
-sleep 2
+
 
 
 

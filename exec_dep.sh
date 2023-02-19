@@ -1,7 +1,11 @@
 #!/bin/bash
 
+# Start 
+source ./loading.sh
+source ./list.sh
+
 # Dependencias 
-sudo apt install neofetch -y
+loading sudo apt install neofetch -y
 source ./funcions.sh && sudo apt install figlet -y 
 figlet "Bem-vindo"
 
@@ -9,6 +13,5 @@ figlet "Bem-vindo"
 sim_ou_nao
 
 # Import
-source ./list.sh
 source ./package_OS.sh
 
