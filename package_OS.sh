@@ -8,41 +8,41 @@ source ./funcions_package.sh
 echo " Verificando net-tools"
 loading
 sleep 1  
-verify_net_tools 
+verify_net_tools $app
 
 # plocate installer ="locate"
 echo " Verificando locate" 
 loading  
 sleep 1
-verify_locate_install
+verify_locate_install $app
 
 # vim installer ="vim"
 echo " Verificando vim"
 loading 
 sudo apt install vim 
 sleep 1
-verify_vim 
+verify_vim $app
 
 
 # git installer ="git"
 echo " Verificando git"
 loading sudo apt install git 
 sleep 1
-verify_git 
+verify_git $app
 
 
 # snap installer ="snap"
 echo " Verificando snap"
 loading sudo apt install snap 
 sleep 1
-verify_snap 
+verify_snap $app
 
 
 # wget installer ="wget"
 echo " Verificando wget"
 loading sudo apt install wget 
 sleep 1
-verify_wget 
+verify_wget $app
 # finished installing || 
 
 # Atualizando pacotes
