@@ -25,7 +25,8 @@ verify_plocate $app
 # vim installer 
 app="vim"
 echo " Verificando vim"
-loading sudo apt install vim 
+loading 
+sudo apt install vim 
 sleep 1
 verify_vim $app
 
