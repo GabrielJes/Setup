@@ -1,7 +1,7 @@
 #!bin/bash
+source ./funcions_apps.sh
 
 # Inicio
-source ./funcions.sh
 sleep 1
 
 # Installer e verify discord
