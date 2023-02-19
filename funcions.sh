@@ -70,9 +70,9 @@ nome=$apf
   fi
 }
 
-install_steam(){
+install_steam() {
 
-loadind 
+loading 
 sudo dpkg --add-architecture i386
 sleep 1
 loading 
