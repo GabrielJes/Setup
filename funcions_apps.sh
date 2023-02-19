@@ -76,9 +76,9 @@ verify_google_chrome() {
 
 # Funcao dedicada para instalacao vscode 
 verify_code() {
-    nome=vscode
-    pacote=$(dpkg --get-selections | grep "$nome" )  
-    sleep 1
+    nome="vode" || "vscode" || "VScode"
+    nome_pacote=$app
+    pacote=$(snap find $nome | grep $nome )
   if [ -n "$pacote" ] ;
     then echo
      echo $nome "Installed! "
@@ -92,7 +92,7 @@ verify_code() {
      sleep 1
      apf=$app
      loading 
-     sudo snap install code
+     sudo snap install code --classic 
      sleep 1
      verify_funcion $apf
 
