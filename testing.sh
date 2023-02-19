@@ -5,7 +5,7 @@ source ./loading.sh
 
 verify_code() {
     nome="vscode"
-    pacote=$(locate -b  "vscode.desktop" | grep "vscode.desktop" )
+    pacote=$(locate -b  "code.desktop" | grep "code.desktop" )
   if [ -n "$pacote" ] ;
     then echo
      echo $nome "Installed! "
