@@ -22,16 +22,19 @@ verify_vim $app
 
 # git installer ="git"
 echo "Installing git"
+loading 
 verify_git $app
 
 
 # snap installer 
 echo "Installing snap"
+loading 
 verify_snap $app
 
 
 # wget installer 
 echo "Installing wget"
+loading 
 verify_wget $app
 # finished installing || 
 
