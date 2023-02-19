@@ -11,7 +11,7 @@ verify_net_tools() {
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "Pacote $nome ja instalado ! "
+     echo "$nome instalado ! "
      echo
      sleep 1
   else echo 
@@ -35,7 +35,7 @@ verify_locate_install() {
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "Pacote $nome ja instalado ! "
+     echo "$nome instalado ! "
      echo
      sleep 1
   else echo 
@@ -60,7 +60,7 @@ verify_vim() {
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "Pacote $nome ja instalado "
+     echo "$nome instalado "
      echo
      sleep 1
   else echo 
@@ -85,7 +85,7 @@ verify_git() {
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "Pacote $nome ja instalado ! "
+     echo "$nome instalado ! "
      echo
      sleep 1
   else echo 
@@ -110,7 +110,7 @@ verify_snap() {
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo $nome "ja instalado! "
+     echo "$nome instalado!"
      echo
      sleep 1
   else echo 
@@ -135,7 +135,7 @@ verify_wget() {
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo $nome "ja instalado! "
+     echo "$nome instalado!"
      echo
      sleep 1
   else echo 
