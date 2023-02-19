@@ -31,28 +31,10 @@ verify_net_tools() {
 
 verify_locate() {
 
-    nome=$app
-    pacote=$(dpkg --get-selections | grep "$nome" )  
-    sleep 1
-  if [ -n "$pacote" ] ;
-    then echo
-     echo "Pacote $nome ja instalado ! "
-     echo
-     sleep 1
-  else echo 
-     echo
-     echo "Pacote $nome nao encontrado !"
-     echo
-     echo "Instalando $nome . . . ."
-     sleep 1
-     apf=$app
-     loading
-     sudo apt install locate -y
-     sleep 1
-     verify_funcion $apf 
-     
-     }
-    
+echo ""
+
+
+}
 
 
 sleep 30
