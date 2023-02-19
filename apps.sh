@@ -17,7 +17,6 @@ sleep 1
 
 # Installer e verify Steam
 echo 'Installing Steam'
-sudo dpkg --configure -a 
 app='steam'
 loading 
 echo
