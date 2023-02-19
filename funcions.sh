@@ -71,10 +71,11 @@ nome=$apf
 }
 
 install_steam() {
-
+  
+echo
 echo "Instalando steam "
 loading 
-sudo dpkg --add-architecture i386 -y
+sudo dpkg --add-architecture i386 
 sleep 1
 loading 
 sudo apt update
