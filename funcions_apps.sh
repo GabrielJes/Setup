@@ -6,7 +6,7 @@ source ./funcions.sh
 # Funcao dedicada para instalacao do discord
 verify_discord() {
     nome='discord' || 'Discord'
-    pacote=$(snap find $nome | grep $nome )  
+    pacote=$(locate -b "discord_erlpack/discord_erlpack.node"  | locate -b "discord.desktop")  
     sleep 1
   if [ -n "$pacote" ] ;
     then echo

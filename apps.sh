@@ -9,7 +9,6 @@ source ./funcions.sh
 echo 'Installing discord'
 loading
 echo
-sudo snap install discord
 verify_discord
 sleep 1
 
