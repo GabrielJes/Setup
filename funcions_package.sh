@@ -6,43 +6,43 @@ source ./loading.sh
 
 # Net-tools
 verify_net_tools() {
-    app=$app
-    pacote=$(dpkg --get-selections | grep "$app" )  
+    nome='net-tools'
+    pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "$app instalado ! "
+     echo "$nome instalado ! "
      echo
      sleep 1
   else echo 
      echo
-     echo "Pacote $app nao encontrado !"
+     echo "Pacote net-tools foi instalado corretamente !"
      echo
-     echo "Instalando $app . . . ."
+     echo "Instalando net-tools novamente . . . ."
      sleep 1
-     apf=$app
+     apf=net-tools
      loading
      sudo apt install net-tools -y
      sleep 1
-     verify_funcion $apf
+     verify_funcion $nome
 
   fi
 }
 
 verify_locate_install() {
-    app=$app
-    pacote=$(dpkg --get-selections | grep "$app" )  
+    nome=$app
+    pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "$app instalado ! "
+     echo "$nome instalado ! "
      echo
      sleep 1
   else echo 
      echo
-     echo "Pacote $app nao encontrado !"
+     echo "Pacote $nome nao encontrado !"
      echo
-     echo "Instalando $app . . . ."
+     echo "Instalando $nome . . . ."
      sleep 1
      apf=$app
      loading
@@ -55,19 +55,19 @@ verify_locate_install() {
 
 # Vim
 verify_vim() {
-    app=$app
-    pacote=$(dpkg --get-selections | grep "$app" )  
+    nome=$app
+    pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "$app instalado "
+     echo "$nome instalado "
      echo
      sleep 1
   else echo 
      echo
-     echo "Pacote $app nao encontrado"
+     echo "Pacote $nome nao encontrado"
      echo
-     echo "Instalando $app . . . ."
+     echo "Instalando $nome . . . ."
      sleep 1
      apf=$app
      loading 
@@ -80,23 +80,23 @@ verify_vim() {
 
 # Git
 verify_git() {
-    app=$app
-    pacote=$(dpkg --get-selections | grep "$app" )  
+    nome=$app
+    pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "$app instalado ! "
+     echo "$nome instalado ! "
      echo
      sleep 1
   else echo 
      echo
-     echo "Pacote $app nao encontrado"
+     echo "Pacote $nome nao encontrado"
      echo
-     echo "Instalando $app . . . ."
+     echo "Instalando $nome . . . ."
      sleep 1
      apf=$app
      loading 
-     sudo apt install $app -y
+     sudo apt install $nome -y
      sleep 1
      verify_funcion $apf
 
@@ -105,19 +105,19 @@ verify_git() {
 
 # snap
 verify_snap() {
-    app=$app
-    pacote=$(dpkg --get-selections | grep "$app" )  
+    nome=$app
+    pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "$app instalado!"
+     echo "$nome instalado!"
      echo
      sleep 1
   else echo 
      echo
-     echo "$app nao foi identificado!"
+     echo "$nome nao foi identificado!"
      echo
-     echo "Instalando $app ."
+     echo "Instalando $nome ."
      sleep 1
      apf=$app
      loading 
@@ -130,19 +130,19 @@ verify_snap() {
 
 # Wget
 verify_wget() {
-    app=$app
-    pacote=$(dpkg --get-selections | grep "$app" )  
+    nome=$app
+    pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
   if [ -n "$pacote" ] ;
     then echo
-     echo "$app instalado!"
+     echo "$nome instalado!"
      echo
      sleep 1
   else echo 
      echo
-     echo "$app nao foi identificado!"
+     echo "$nome nao foi identificado!"
      echo
-     echo "Instalando $app ."
+     echo "Instalando $nome ."
      sleep 1
      apf=$app
      loading 
