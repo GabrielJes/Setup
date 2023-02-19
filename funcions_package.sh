@@ -24,7 +24,7 @@ verify_net_tools() {
      loading
      sudo apt install net-tools -y
      sleep 1
-     verify_funcion
+     verify_funcion $apf
 
   fi
 }
@@ -48,9 +48,9 @@ verify_locate_install() {
      loading
      sudo apt install locate -y
      sleep 1
-     verify_funcion 
+     verify_funcion $apf
   fi  
-  
+
 }
 
 # Vim
@@ -73,7 +73,7 @@ verify_vim() {
      loading 
      sudo apt install vim 
      sleep 1
-     verify_funcion 
+     verify_funcion $apf
 
   fi
 }
