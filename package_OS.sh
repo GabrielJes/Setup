@@ -16,9 +16,9 @@ sleep 1
 verify_net_tools $app
 
 # plocate installer 
-app="plocate"
-echo " Verificando plocate" 
-loading sudo apt install plocate 
+app="locate"
+echo " Verificando locate" 
+loading sudo apt install locate 
 sleep 1
 verify_plocate $app
 
