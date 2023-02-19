@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # S/n para continuar ou fechar o comando
 sim_ou_nao() {
 
@@ -27,7 +28,7 @@ sleep 1
 # fucao para verificar a verificacao esta funcioinando bem, e uma especie de 2 check
 verify_funcion(){
 
-nome=$apf
+    nome=$apf
     pacote=$(dpkg --get-selections | grep "$nome" )  
     sleep 1
   if [ -n "$pacote" ] ;
