@@ -51,6 +51,8 @@ sleep 1
 echo
 loading sudo apt upgrade -y
 sleep 1
+echo
+sleep 2
 
 # versao do sistema operacional atual
 echo "Sistema operacional atual"
