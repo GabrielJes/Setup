@@ -41,15 +41,16 @@ sleep 1 && verify_git $app
 # snap installer 
 app="snap"
 echo "Instalando snap"
-barra_de_loading sudo 
-apt install snap -y 
+barra_de_loading  
+sudo apt install snap -y 
 sleep 1 && verify_snap $app
 
 
 # wget installer 
 app="wget"
 echo "Instalando wget"
-barra_de_loading sudo apt install wget -y
+barra_de_loading 
+sudo apt install wget -y
 sleep 1 && wget $app
 # finished installing || 
 
