@@ -5,7 +5,7 @@ source ./funcions.sh
 
 # Funcao dedicada para instalacao do discord
 verify_discord() {
-    nome=$app
+    nome='discord' || 'Discord'
     pacote=$(snap find $nome | grep $nome )  
     sleep 1
   if [ -n "$pacote" ] ;
