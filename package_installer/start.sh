@@ -14,7 +14,6 @@ echo
 sleep 1
 echo "Starting the package installation"
 sleep 1
-echo
 
 # Iniciando os pacotes 
 source ./operational_system.sh

@@ -58,4 +58,8 @@ name_package='wget'
 verify_install_packages
 install_apt_package
 new_verify_install_package $name_package
+sleep 1
 
+cd ..
+cd ~/Setup/application_installer
+source ./app_install.sh

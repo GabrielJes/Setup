@@ -6,7 +6,7 @@ source ./functions_sn.sh
 # Função que verifica se o aplicativo com nome "name _package" esta ou não instalado
 # Se estiver instalado o its_installed recebe true se não recebe false.
 
-verify_install_packages() {
+verify_install_apps_apt() {
     name=$name_package
     pacote=$(dpkg --get-selections | grep "$name" )  
   if [ -n "$pacote" ] ;
@@ -25,7 +25,7 @@ if [ $its_installed != true ] ;
 then
     sudo apt-get install $name_package 
 else
-    echo "Package installed !"
+    echo "$name_package installed !"
     sleep 1
 fi
 }
@@ -44,7 +44,7 @@ new_verify_install_package() {
         sleep 1
         echo
   else 
-        sn_ignore_package
+        sn_ignore_aplication
   fi  
 }
 
