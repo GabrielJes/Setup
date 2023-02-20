@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 cd ~/Setup/application_installer/functions
 
 source ./funcions_sn.sh
@@ -13,9 +11,9 @@ source ./functions_snap.sh
 echo "Installing Discord"
 sleep 1
 name_package='discord'
-end='(locate -b "discord_erlpack/discord_erlpack.node"  | locate -b "discord.desktop")'
+endereco_arq='(locate -b "discord_erlpack/discord_erlpack.node"  | locate -b "discord.desktop")'
 verify_snap
-verify_snap_package
+install_snap_package
 verify_install_packages
 install_apt_package
 new_verify_install_package $name_package
