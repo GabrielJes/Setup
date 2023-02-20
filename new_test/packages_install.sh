@@ -1,6 +1,8 @@
 #!/bin/bash
-source ./functions_packeges_apt.sh
-source ./functions_sn.sh
+
+source ./functions/function_loading.sh
+source ./functions/functions_sn.sh
+source ./functions/functions_packeges_apt.sh
 
 # Install packages and verify
 echo "Installing net-tools"
@@ -10,6 +12,7 @@ verify_install_packages
 install_apt_package
 new_verify_install_package $name_package
 
+
 # Install packages and verify
 echo "Installing mlocate"
 sleep 1
@@ -17,6 +20,7 @@ name_package='mlocate'
 verify_install_packages
 install_apt_package
 new_verify_install_package $name_package
+
 
 # Install packages and verify
 echo "Installing vim"
@@ -26,6 +30,7 @@ verify_install_packages
 install_apt_package
 new_verify_install_package $name_package
 
+
 # Install packages and verify
 echo "Installing git"
 sleep 1
@@ -33,6 +38,7 @@ name_package='git'
 verify_install_packages
 install_apt_package
 new_verify_install_package $name_package
+
 
 # Install packages and verify
 echo "Installing snap"
@@ -42,6 +48,7 @@ verify_install_packages
 install_apt_package
 new_verify_install_package $name_package
 
+
 # Install packages and verify
 echo "Installing wget "
 sleep 1
@@ -50,3 +57,6 @@ verify_install_packages
 install_apt_package
 new_verify_install_package $name_package
 
+
+# Arquivo de sistema operacional 
+source ./operational_system.sh

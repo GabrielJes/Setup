@@ -26,6 +26,7 @@ then
     sudo apt-get install $name_package 
 else
     echo "Package installed !"
+    sleep 1
 fi
 }
 
@@ -40,6 +41,7 @@ new_verify_install_package() {
     then 
         sleep 2
         echo "successful installation"
+        sleep 1
         echo
   else 
         sn_ignore_package
