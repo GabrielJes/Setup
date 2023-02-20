@@ -25,24 +25,6 @@ new_verify_install_package $name_package
 
 
 # Install packages and verify
-echo "Installing vim"
-sleep 1
-name_package='vim'
-verify_install_packages
-install_apt_package
-new_verify_install_package $name_package
-
-
-# Install packages and verify
-echo "Installing git"
-sleep 1
-name_package='git'
-verify_install_packages
-install_apt_package
-new_verify_install_package $name_package
-
-
-# Install packages and verify
 echo "Installing snap"
 sleep 1
 name_package='snap'

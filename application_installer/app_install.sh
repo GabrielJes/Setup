@@ -1,22 +1,34 @@
 #!/bin/bash
 
 cd ~/Setup/application_installer/functions
-
-source ./funcions_sn.sh
-source ./function_loading.sh
 source ./functions_apt.sh
-source ./functions_snap.sh
+
 
 # Install apps and verify
-echo "Installing Discord"
-sleep 1
+name_package='code'
+verify_install_apps_apt $name_package
+
+# Install apps and verify
+name_package='steam'
+verify_install_apps_apt $name_package
+
+# Install apps and verify
 name_package='discord'
-endereco_arq='(locate -b "discord_erlpack/discord_erlpack.node"  | locate -b "discord.desktop")'
-verify_snap
-install_snap_package
-verify_install_packages
-install_apt_package
-new_verify_install_package $name_package
+verify_install_apps_apt $name_package
 
+# Install apps and verify
+name_package='spotify'
+verify_install_apps_apt $name_package
 
+# Install apps and verify
+name_package='pycharm'
+verify_install_apps_apt $name_package
+
+# Install apps and verify
+name_package='jupyter'
+verify_install_apps_apt $name_package
+
+# Install apps and verify
+name_package='google.chrome'
+verify_install_apps_apt $name_package
 

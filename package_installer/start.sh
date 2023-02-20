@@ -3,10 +3,9 @@ source ./functions/function_loading.sh
 source ./functions/functions_sn.sh
 
 # Dependencias 
-echo "Loading ."
-loading 
-sudo apt install neofetch -y &&
-sudo apt install figlet -y 
+echo
+echo "configuring dependencies ."
+loading sudo apt install figlet -y 
 echo
 figlet "Welcome"
 sleep 1
