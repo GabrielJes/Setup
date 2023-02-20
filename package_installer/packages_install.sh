@@ -1,8 +1,10 @@
 #!/bin/bash
 
-source ./functions/function_loading.sh
-source ./functions/functions_sn.sh
-source ./functions/functions_packeges_apt.sh
+cd ~/Setup/package_installer/functions
+
+source ./function_loading.sh
+source ./functions_sn.sh
+source ./functions_packeges_apt.sh
 
 # Install packages and verify
 echo "Installing net-tools"

@@ -1,7 +1,6 @@
 #!/bin/bash
 source ./functions/function_loading.sh
 
-
 # Atualizando pacotes do sistema
 echo "System package update"
 echo
