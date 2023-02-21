@@ -46,12 +46,16 @@ sleep 1
 
 # Install apps and verify
 echo "Installing Jupyter ! "
+fix='/usr'
+search=jupyter
 name_package=jupyter
 verify_install_apps_apt $name_package
 sleep 1
 
 # Install apps and verify
 echo "Installing Google-Chrome ! "
+fix '/usr'
+search=google-chrome
 name_package=google.chrome
 verify_install_google $name_package
 sleep 1

@@ -8,7 +8,6 @@ source ./function_loading.sh
 # Se estiver instalado o its_installed recebe true se não recebe false.
 
 verify_install_apps_apt() {
-    name=$name_package
     pacote=$(dpkg --get-selections | sudo find $fix -name $search)
   if [ "$pacote" ] ;
     then 
@@ -19,7 +18,7 @@ verify_install_apps_apt() {
  # //
   if [ $its_installed != true ] ; 
 then
-    sudo apt-get install $name_package 
+    sudo apt install $name_package 
 else
     echo "$name_package installed !"
     echo
@@ -90,6 +89,7 @@ echo "  1 - Pycharm - educational "
 echo "  2 - Pycharm - professional "
 echo "  3 - Pycharm - community "
 echo
+sleep 1
 
 read -n 1 -s n
 case $n in
@@ -113,6 +113,7 @@ case $n in
   sleep 1
   loading sudo snap install pycharm-community --classic
   verify_apps ;; 
+  sleep 1
   
   *) echo "invalid option";;
 esac
