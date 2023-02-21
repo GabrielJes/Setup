@@ -5,7 +5,6 @@ source ./functions_apt.sh
 
 
 # Install apps and verify
-packages=$(dpkg --get-selections | sudo find /var -name code.desktop)         
 name_package=vscode
 verify_install_apps_apt $name_package
 
