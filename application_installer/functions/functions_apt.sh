@@ -12,9 +12,9 @@ verify_install_apps_apt() {
     pacote=$packages
   if [ "$pacote" ] ;
     then 
-        its_installed='false'
-  else 
         its_installed='true'
+  else 
+        its_installed='false'
   fi
  # //
   if [ $its_installed != true ] ; 
@@ -22,6 +22,7 @@ then
     sudo apt-get install $name_package 
 else
     echo "$name_package installed !"
+    echo
     sleep 1
 fi  
 
