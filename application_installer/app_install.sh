@@ -8,7 +8,7 @@ source ./functions_apt.sh
 echo "Installing Visual Code ! "
 fix='/snap' 
 search=code-url-handler.desktop
-name_package='vscode'
+name_package='code'
 verify_install_apps_snap $name_package
 sleep 1
 
