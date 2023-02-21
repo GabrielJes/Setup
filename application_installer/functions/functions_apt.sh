@@ -8,7 +8,7 @@ source ./funcions_sn.sh
 
 verify_install_apps_apt() {
     name=$name_package
-    packages=$(code_code.desktop $name)
+    packages=$(dpkg --get-selections | sudo find /usr -name $name)
     pacote=$packages
   if [ "$pacote" ] ;
     then 
