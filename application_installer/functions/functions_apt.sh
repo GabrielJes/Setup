@@ -31,7 +31,7 @@ verify_install_apps_snap() {
     name=$name_package
     packages=$(dpkg --get-selections | sudo find /usr -name $name)
     pacote=$packages
-  if [ -n "$pacote" ] ;
+  if [ "$pacote" ] ;
     then 
         its_installed='true'
   else 
@@ -52,7 +52,7 @@ verify_install_google() {
     name=$name_package
     packages=$(dpkg --get-selections | sudo find /usr -name $name)
     pacote=$packages
-  if [ -n "$pacote" ] ;
+  if [ "$pacote" ] ;
     then 
         its_installed='true'
   else 
@@ -124,7 +124,7 @@ esac
 verify_install_pycharm() {
     name=$name_package
     pacote=$(dpkg --get-selections | sudo find /usr -name $name)
-  if [ -n "$pacote" ] ;
+  if [ "$pacote" ] ;
     then 
         its_installed='true'
   else 
