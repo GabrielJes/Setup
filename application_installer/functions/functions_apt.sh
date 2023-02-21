@@ -19,7 +19,8 @@ verify_install_apps_apt() {
   if [ $its_installed != true ] ; 
 then
     sudo apt install $name_package 
-else
+else                          
+    echo 
     echo "$name_package installed !"
     echo
     sleep 1
@@ -40,6 +41,7 @@ verify_install_apps_snap() {
 then
     sudo snap install $name_package --classic
 else
+    echo
     echo "$name_package installed !"
     sleep 1
 fi  
@@ -60,6 +62,7 @@ verify_install_google() {
 then
     google_install
 else
+    echo
     echo "$name_package installed !"
     sleep 1
 fi  
@@ -133,6 +136,7 @@ verify_install_pycharm() {
 then
     menu_pycharm
 else
+    echo
     echo "$name_package installed !"
     sleep 1
 fi  
@@ -152,6 +156,7 @@ verify_apps() {
 then
     echo "error (493#772)" 
 else
+    echo
     echo "$name_package installed !"
     echo
     sleep 1
