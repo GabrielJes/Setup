@@ -43,6 +43,7 @@ then
 else
     echo
     echo "$name_package installed !"
+    echo
     sleep 1
 fi  
   
