@@ -12,9 +12,9 @@ verify_install_apps_apt() {
     pacote=$packages
   if [ -n "$pacote" ] ;
     then 
-        its_installed='true'
-  else 
         its_installed='false'
+  else 
+        its_installed='true'
   fi
  # //
   if [ $its_installed != true ] ; 
