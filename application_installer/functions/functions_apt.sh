@@ -29,7 +29,7 @@ fi
 
 verify_install_apps_snap() {
     name=$name_package
-    pacote=$(dpkg --get-selections | sudo find /usr -name $name)
+    pacote=$(dpkg --get-selections | sudo find $fix -name $name)
   if [ -n "$pacote" ] ;
     then 
         its_installed='true'
