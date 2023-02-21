@@ -5,7 +5,8 @@ source ./functions/functions_sn.sh
 # Dependencias 
 echo
 echo "configuring dependencies ."
-loading sudo apt install figlet -y 
+loading
+sudo apt install figlet -y 
 echo
 figlet "Welcome"
 sleep 1
