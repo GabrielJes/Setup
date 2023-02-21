@@ -25,7 +25,7 @@ echo "Installing Discord ! "
 fix='/usr'
 search=discord
 name_package=discord
-verify_install_apps_apt $name_package
+verify_install_apps_snap $name_package
 sleep 1
 
 # Install apps and verify

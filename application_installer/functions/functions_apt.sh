@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ./funcions_sn.sh
+source ./function_loading.sh
 
 
 # Função que verifica se o aplicativo com nome "name _package" esta ou não instalado
@@ -18,7 +19,7 @@ verify_install_apps_apt() {
  # //
   if [ $its_installed != true ] ; 
 then
-    sudo apt-get install $name_package 
+    loading sudo apt-get install $name_package 
 else
     echo "$name_package installed !"
     echo
@@ -26,7 +27,6 @@ else
 fi  
 
 }
-
 verify_install_apps_snap() {
     name=$name_package
     pacote=$(dpkg --get-selections | sudo find $fix -name $search)
@@ -39,7 +39,7 @@ verify_install_apps_snap() {
  # //
   if [ $its_installed == false ] ; 
 then
-    sudo snap install $name_package --classic
+    loading sudo snap install $name_package --classic
 else
     echo "$name_package installed !"
     sleep 1
@@ -59,7 +59,7 @@ verify_install_google() {
  # //
   if [ $its_installed != true ] ; 
 then
-    google_install
+    loading google_install
 else
     echo "$name_package installed !"
     sleep 1
@@ -121,7 +121,7 @@ esac
 
 verify_install_pycharm() {
     name=$name_package
-    pacote=$(dpkg --get-selections | sudo find /usr -name $name)
+    pacote=$(dpkg --get-selections | sudo find $fix -name $search)
   if [ "$pacote" ] ;
     then 
         its_installed='true'
