@@ -37,7 +37,7 @@ verify_install_apps_snap() {
         its_installed='false'
   fi
  # //
-  if [ $its_installed != true ] ; 
+  if [ $its_installed == false ] ; 
 then
     sudo snap install $name_package --classic
 else
