@@ -8,7 +8,7 @@ source ./funcions_sn.sh
 
 verify_install_apps_apt() {
     name=$name_package
-    packages='$(dpkg --get-selections | sudo find /usr -name $name_package ) '
+    packages=$(dpkg --get-selections | sudo find /usr -name $name)
     pacote=$packages
   if [ -n "$pacote" ] ;
     then 
@@ -29,7 +29,7 @@ fi
 
 verify_install_apps_snap() {
     name=$name_package
-    packages='$(dpkg --get-selections | sudo find /usr -name $name_package ) '
+    packages=$(dpkg --get-selections | sudo find /usr -name $name)
     pacote=$packages
   if [ -n "$pacote" ] ;
     then 
@@ -50,7 +50,7 @@ fi
 
 verify_install_google() {
     name=$name_package
-    packages='$(dpkg --get-selections | sudo find /usr -name $name_package ) '
+    packages=$(dpkg --get-selections | sudo find /usr -name $name)
     pacote=$packages
   if [ -n "$pacote" ] ;
     then 
