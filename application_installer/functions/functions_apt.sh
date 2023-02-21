@@ -48,7 +48,7 @@ fi
 
 verify_install_google() {
     name=$name_package
-    pacote=$(dpkg --get-selections | sudo find /usr -name $name)
+    pacote=$(dpkg --get-selections | sudo find $fix -name $search)
   if [ "$pacote" ] ;
     then 
         its_installed='true'
@@ -113,7 +113,6 @@ case $n in
   sleep 1
   loading sudo snap install pycharm-community --classic
   verify_apps ;; 
-  sleep 1
   
   *) echo "invalid option";;
 esac
