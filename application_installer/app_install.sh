@@ -54,7 +54,7 @@ sleep 1
 
 # Install apps and verify
 echo "Installing Google-Chrome ! "
-fix '/usr'
+fix='/usr'
 search=google-chrome
 name_package=google.chrome
 verify_install_google $name_package
