@@ -97,21 +97,21 @@ case $n in
   echo
   echo "Installing again Pycharm - educational " 
   sleep 1
-  loading sudo snap install pycharm-educational --classic
+  sudo snap install pycharm-educational --classic
   verify_apps ;;
 
   2) echo "Pycharm - professional " 
   echo
   echo "Installing again Pycharm - professional " 
   sleep 1
-  loading sudo snap install pycharm-professional --classic
+  sudo snap install pycharm-professional --classic
   verify_apps ;;
 
   3) echo "Pycharm - community " 
   echo
   echo "Installing again Pycharm - community " 
   sleep 1
-  loading sudo snap install pycharm-community --classic
+  sudo snap install pycharm-community --classic
   verify_apps ;; 
   
   *) echo "invalid option";;
