@@ -123,7 +123,7 @@ esac
 
 verify_install_pycharm() {
     name=$name_package
-    packages='$(dpkg --get-selections | sudo find /usr -name $name_package ) '
+    packages='$(dpkg --get-selections | sudo find /usr -name ) ' $name_package
     pacote=$packages
   if [ -n "$pacote" ] ;
     then 
