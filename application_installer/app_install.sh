@@ -5,7 +5,8 @@ source ./functions_apt.sh
 
 
 # Install apps and verify
-name_package=vscode
+echo " Installing vscode ! "
+name_package=code
 verify_install_apps_apt $name_package
 
 # Install apps and verify
