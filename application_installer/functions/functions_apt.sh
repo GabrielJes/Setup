@@ -138,3 +138,22 @@ else
 fi  
   
 }
+
+verify_apps() {
+    pacote=$(dpkg --get-selections | sudo find $fix -name $search)
+  if [ "$pacote" ] ;
+    then 
+        its_installed='true'
+  else 
+        its_installed='false'
+  fi
+ # //
+  if [ $its_installed != true ] ; 
+then
+    echo "error (493#772)" 
+else
+    echo "$name_package installed !"
+    echo
+    sleep 1
+fi  
+}
