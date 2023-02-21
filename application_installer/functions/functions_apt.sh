@@ -40,7 +40,7 @@ verify_install_apps_snap() {
  # //
   if [ $its_installed != true ] ; 
 then
-    sudo snap installl $name_package --classic
+    sudo snap install $name_package --classic
 else
     echo "$name_package installed !"
     sleep 1
