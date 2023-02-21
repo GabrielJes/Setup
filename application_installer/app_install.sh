@@ -22,7 +22,7 @@ sleep 1
 
 # Install apps and verify
 echo "Installing Discord ! "
-fix='/snap'
+fix='/snap/bin'
 search=discord
 name_package=discord
 verify_install_apps_snap $name_package
