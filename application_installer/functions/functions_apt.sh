@@ -39,7 +39,7 @@ verify_install_apps_snap() {
  # //
   if [ $its_installed == false ] ; 
 then
-    loading sudo snap install $name_package --classic
+    sudo snap install $name_package --classic
 else
     echo "$name_package installed !"
     sleep 1
@@ -59,7 +59,7 @@ verify_install_google() {
  # //
   if [ $its_installed != true ] ; 
 then
-    loading google_install
+    google_install
 else
     echo "$name_package installed !"
     sleep 1
