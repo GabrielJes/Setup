@@ -5,30 +5,30 @@ source ./functions_apt.sh
 
 
 # Install apps and verify
-name_package='code'
+name_package=code
 verify_install_apps_apt $name_package
 
 # Install apps and verify
-name_package='steam'
+name_package=steam
 verify_install_apps_snap $name_package
 
 # Install apps and verify
-name_package='discord'
+name_package=discord
 verify_install_apps_apt $name_package
 
 # Install apps and verify
-name_package='spotify'
+name_package=spotify
 verify_install_apps_snap $name_package
 
 # Install apps and verify
-name_package='pycharm'
+name_package=pycharm
 verify_install_pycharm $name_package
 
 # Install apps and verify
-name_package='jupyter'
+name_package=jupyter
 verify_install_apps_apt $name_package
 
 # Install apps and verify
-name_package='google.chrome'
+name_package=google.chrome
 verify_install_google $name_package
 
