@@ -5,43 +5,43 @@ source ./functions_apt.sh
 
 
 # Install apps and verify
-echo " Installing Visual Code ! "
+echo "Installing Visual Code ! "
 name_package=code
 verify_install_apps_snap $name_package
 sleep 1
 
 # Install apps and verify
-echo " Installing Steam ! "
+echo "Installing Steam ! "
 name_package=steam
 verify_install_apps_snap $name_package
 sleep 1
 
 # Install apps and verify
-echo " Installing Discord ! "
+echo "Installing Discord ! "
 name_package=discord
 verify_install_apps_apt $name_package
 sleep 1
 
 # Install apps and verify
-echo " Installing Spotify ! "
+echo "Installing Spotify ! "
 name_package=spotify
 verify_install_apps_snap $name_package
 sleep 1
 
 # Install apps and verify
-echo " Installing Pycharm ! "
+echo "Installing Pycharm ! "
 name_package=pycharm
 verify_install_pycharm $name_package
 sleep 1
 
 # Install apps and verify
-echo " Installing Jupyter ! "
+echo "Installing Jupyter ! "
 name_package=jupyter
 verify_install_apps_apt $name_package
 sleep 1
 
 # Install apps and verify
-echo " Installing Google-Chrome ! "
+echo "Installing Google-Chrome ! "
 name_package=google.chrome
 verify_install_google $name_package
 sleep 1
