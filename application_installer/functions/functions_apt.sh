@@ -19,7 +19,7 @@ verify_install_apps_apt() {
  # //
   if [ $its_installed != true ] ; 
 then
-    loading sudo apt-get install $name_package 
+    sudo apt-get install $name_package 
 else
     echo "$name_package installed !"
     echo
