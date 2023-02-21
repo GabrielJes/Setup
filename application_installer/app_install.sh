@@ -7,7 +7,7 @@ source ./functions_apt.sh
 # Install apps and verify
 echo " Installing vscode ! "
 name_package=code
-verify_install_apps_apt $name_package
+verify_install_apps_snap $name_package
 
 # Install apps and verify
 name_package=steam
