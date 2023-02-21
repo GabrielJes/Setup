@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# loading
 loading(){
 
 BAR='#####################'   
