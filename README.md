@@ -16,8 +16,8 @@ $ git clone gh repo clone GabrielJes/Setup
 
 // 
 
-alias run='cd Setup && bash on.sh' >> .bashrc 
+alias bacate='cd Setup && bash on.sh' >> .bashrc 
 source .bashrc
 
-run
+bacate
 
