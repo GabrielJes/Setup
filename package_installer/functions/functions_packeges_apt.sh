@@ -26,7 +26,6 @@ then
     sudo apt-get install $name_package 
 else
     echo "Package installed !"
-    sleep 1
 fi
 }
 
@@ -39,7 +38,6 @@ new_verify_install_package() {
     pacote=$(dpkg --get-selections | grep "$name" )  
   if [ -n "$pacote" ] ;
     then 
-        sleep 2
         echo "successful installation"
         sleep 1
         echo
@@ -48,3 +46,25 @@ new_verify_install_package() {
   fi  
 }
 
+verify_remove_firefox() {
+    pacote=$(sudo find $fix -name $search)
+  if [ "$pacote" ] ;
+    then 
+        its_installed='true'
+  else 
+        its_installed='false'
+  fi
+ # //
+  if [ $its_installed == true ] ; 
+then
+    sudo apt remove $name_package 
+    sleep 1
+    echo 'ackages will be REMOVED: firefox'
+else                          
+    echo 
+    echo "$name_package not installed !"
+    echo
+    sleep 1
+fi  
+
+}

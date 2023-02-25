@@ -40,6 +40,15 @@ name_package='wget'
 verify_install_packages
 install_apt_package
 new_verify_install_package $name_package
+
+
+echo "Removing firefox"
+sleep 1
+name_package='firefox'
+fix='/usr/bin'
+search='firefox'
+verify_remove_firefox
+echo
 sleep 1
 
 cd ..
