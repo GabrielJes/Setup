@@ -5,7 +5,7 @@ source ./functions/function_loading.sh
 echo "System package update"
 loading sudo apt upgrade -y
 echo
-sleep 2
+sleep 1
 echo
 
 source ./packages_install.sh
