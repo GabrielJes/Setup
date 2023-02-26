@@ -8,7 +8,7 @@ source ./function_loading.sh
 # Se estiver instalado o its_installed recebe true se não recebe false.
 
 verify_install_apps_apt() {
-    pacote=$(dpkg --get-selections | sudo find $fix -name $search)
+    pacote=$(dpkg --get-selections | sudo find $local -name $search)
   if [ "$pacote" ] ;
     then 
         its_installed='true'
@@ -29,7 +29,7 @@ fi
 }
 verify_install_apps_snap() {
     name=$name_package
-    pacote=$(dpkg --get-selections | sudo find $fix -name $search)
+    pacote=$(dpkg --get-selections | sudo find $local -name $search)
   if [ -n "$pacote" ] ;
     then 
         its_installed='true'
@@ -51,7 +51,7 @@ fi
 
 verify_install_google() {
     name=$name_package
-    pacote=$(dpkg --get-selections | sudo find $fix -name $search)
+    pacote=$(dpkg --get-selections | sudo find $local -name $search)
   if [ "$pacote" ] ;
     then 
         its_installed='true'
@@ -125,7 +125,7 @@ esac
 
 verify_install_pycharm() {
     name=$name_package
-    pacote=$(dpkg --get-selections | sudo find $fix -name $search)
+    pacote=$(dpkg --get-selections | sudo find $local -name $search)
   if [ "$pacote" ] ;
     then 
         its_installed='true'
@@ -146,7 +146,7 @@ fi
 }
 
 verify_apps() {
-    pacote=$(dpkg --get-selections | sudo find $fix -name $search)
+    pacote=$(dpkg --get-selections | sudo find $local -name $search)
   if [ "$pacote" ] ;
     then 
         its_installed='true'

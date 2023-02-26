@@ -58,7 +58,21 @@ local='/usr/bin'
 search=google-chrome
 name_package=google.chrome
 verify_install_google $name_package
+echo
 sleep 1
 
+# Install apps and verify
+echo "Installing virtualbox ! "
+local='/usr/bin'
+search=virtualbox
+name_package=virtualbox
+verify_install_apps_apt
+sleep 1
 
-
+# Install apps and verify
+echo "Installing docker ! "
+local='/usr/bin'
+search=docker
+name_package=docker
+verify_install_apps_apt
+sleep 1
