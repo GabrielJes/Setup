@@ -74,5 +74,5 @@ echo "Installing docker ! "
 local='/usr/bin'
 search=docker
 name_package=docker
-verify_install_apps_apt
+verify_install_apps_snap
 sleep 1
