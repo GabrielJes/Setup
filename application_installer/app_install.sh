@@ -76,3 +76,4 @@ search=docker
 name_package=docker
 verify_install_apps_snap
 sleep 1
+
