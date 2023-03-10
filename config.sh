@@ -1,15 +1,13 @@
 #!/bin/bash
 
 echo 
-echo "running ..."
-alias cat='lolcat' >> .bashrc
-alias python='python3' >> .bashrc
-alias on='cd /Setup' && 'bash on' >> .bashrc
+cd ..
+echo alias cat='lolcat ' >> .bashrc
+echo alias python='python3 ' >> .bashrc
+echo alias run='cd Setup && bash on.sh ' >> .bashrc 
+echo alias update='sudo apt-get update '>> .bashrc 
+echo alias upgrade='sudo apt upgrade ' >> .bashrc 
+echo alias ip='ip a | grep inet ' >> .bashrc
+source ~/.bashrc
 
-read -p "install dash to dock? " confirm && 
-[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 
-mkdir 'dash-to-dock'
-cd ~/dash-to-dock
-wget https://extensions.gnome.org/extension-data/dash-to-dockmicxgx.gmail.com.v71.shell-extension.zip
-unzip unzip dash-to-dockmicxgx.gmail.com.v71.shell-extension.zip 
